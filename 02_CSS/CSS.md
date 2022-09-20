@@ -6,8 +6,10 @@
 
 | [Simple selectors](https://www.w3schools.com/css/css_selectors.asp) | Example    | Example description                             |
 | :----------------------------------------------------------- | ---------- | :---------------------------------------------- |
-| [#*id*](https://www.w3schools.com/cssref/sel_id.asp)         | #firstname | Selects the element with id="firstname"         |
-| [.*class*](https://www.w3schools.com/cssref/sel_class.asp)   | .intro     | Selects all elements with class="intro"         |
+| [#*
+id*](https://www.w3schools.com/cssref/sel_id.asp)         | #firstname | Selects the element with id="firstname"         |
+| [.*
+class*](https://www.w3schools.com/cssref/sel_class.asp)   | .intro     | Selects all elements with class="intro"         |
 | *[element.class](https://www.w3schools.com/cssref/sel_element_class.asp)* | p.intro    | Selects only <p> elements with class="intro"    |
 | [*](https://www.w3schools.com/cssref/sel_all.asp)            | *          | Selects all elements                            |
 | *[element](https://www.w3schools.com/cssref/sel_element.asp)* | p          | Selects all <p> elements                        |
@@ -15,10 +17,14 @@
 
 | [Combinator selectors](https://www.w3schools.com/css/css_combinators.asp) | Example | Example description                                          |
 | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
-| [*element element*](https://www.w3schools.com/cssref/sel_element_element.asp) | div p   | Selects all <p> elements inside <div> elements               |
-| [*element>element*](https://www.w3schools.com/cssref/sel_element_gt.asp) | div > p | Selects all <p> elements where the parent is a <div> element |
-| [*element+element*](https://www.w3schools.com/cssref/sel_element_pluss.asp) | div + p | Selects the first <p> element that are placed immediately after <div> elements |
-| [*element1~element2*](https://www.w3schools.com/cssref/sel_gen_sibling.asp) | p ~ ul  | Selects every <ul> element that are preceded by a <p> element |
+| [*element
+element*](https://www.w3schools.com/cssref/sel_element_element.asp) | div p   | Selects all <p> elements inside <div> elements               |
+| [*element>
+element*](https://www.w3schools.com/cssref/sel_element_gt.asp) | div > p | Selects all <p> elements where the parent is a <div> element |
+| [*
+element+element*](https://www.w3schools.com/cssref/sel_element_pluss.asp) | div + p | Selects the first <p> element that are placed immediately after <div> elements |
+| [*element1~
+element2*](https://www.w3schools.com/cssref/sel_gen_sibling.asp) | p ~ ul  | Selects every <ul> element that are preceded by a <p> element |
 
 | Pseudo classes Selectors                                     | Example               | Example description                                          |
 | :----------------------------------------------------------- | :-------------------- | :----------------------------------------------------------- |
@@ -33,7 +39,8 @@
 | [:hover](https://www.w3schools.com/cssref/sel_hover.asp)     | a:hover               | Selects links on mouse over                                  |
 | [:in-range](https://www.w3schools.com/cssref/sel_in-range.asp) | input:in-range        | Selects <input> elements with a value within a specified range |
 | [:invalid](https://www.w3schools.com/cssref/sel_invalid.asp) | input:invalid         | Selects all <input> elements with an invalid value           |
-| [:lang(*language*)](https://www.w3schools.com/cssref/sel_lang.asp) | p:lang(it)            | Selects every <p> element with a lang attribute value starting with "it" |
+| [:lang(*
+language*)](https://www.w3schools.com/cssref/sel_lang.asp) | p:lang(it)            | Selects every <p> element with a lang attribute value starting with "it" |
 | [:last-child](https://www.w3schools.com/cssref/sel_last-child.asp) | p:last-child          | Selects every <p> elements that is the last child of its parent |
 | [:last-of-type](https://www.w3schools.com/cssref/sel_last-of-type.asp) | p:last-of-type        | Selects every <p> element that is the last <p> element of its parent |
 | [:link](https://www.w3schools.com/cssref/sel_link.asp)       | a:link                | Selects all unvisited links                                  |
@@ -64,13 +71,20 @@
 
 | Attribute selectors                                          | Example              | Example description                                          |
 | :----------------------------------------------------------- | :------------------- | :----------------------------------------------------------- |
-| [[*attribute*\]](https://www.w3schools.com/cssref/sel_attribute.asp) | [target]             | Selects all elements with a target attribute                 |
-| [[*attribute*=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value.asp) | [target=_blank]      | Selects all elements with target="_blank"                    |
-| [[*attribute*~=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value_contains.asp) | [title~=flower]      | Selects all elements with a title attribute containing the word "flower" |
-| [[*attribute*\|=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value_lang.asp) | [lang\|=en]          | Selects all elements with a lang attribute value starting with "en" |
-| [[*attribute*^=*value*\]](https://www.w3schools.com/cssref/sel_attr_begin.asp) | a[href^="https"]     | Selects every <a> element whose href attribute value begins with "https" |
-| [[*attribute*$=*value*\]](https://www.w3schools.com/cssref/sel_attr_end.asp) | a[href$=".pdf"]      | Selects every <a> element whose href attribute value ends with ".pdf" |
-| [[*attribute**=*value*\]](https://www.w3schools.com/cssref/sel_attr_contain.asp) | a[href*="w3schools"] | Selects every <a> element whose href attribute value contains the substring "w3schools" |
+| [[*
+attribute*\]](https://www.w3schools.com/cssref/sel_attribute.asp) | [target]             | Selects all elements with a target attribute                 |
+| [[*attribute*=*
+value*\]](https://www.w3schools.com/cssref/sel_attribute_value.asp) | [target=_blank]      | Selects all elements with target="_blank"                    |
+| [[*attribute*~=*
+value*\]](https://www.w3schools.com/cssref/sel_attribute_value_contains.asp) | [title~=flower]      | Selects all elements with a title attribute containing the word "flower" |
+| [[*attribute*\|=*
+value*\]](https://www.w3schools.com/cssref/sel_attribute_value_lang.asp) | [lang\|=en]          | Selects all elements with a lang attribute value starting with "en" |
+| [[*attribute*^=*
+value*\]](https://www.w3schools.com/cssref/sel_attr_begin.asp) | a[href^="https"]     | Selects every <a> element whose href attribute value begins with "https" |
+| [[*attribute*$=*
+value*\]](https://www.w3schools.com/cssref/sel_attr_end.asp) | a[href$=".pdf"]      | Selects every <a> element whose href attribute value ends with ".pdf" |
+| [[*attribute**=*
+value*\]](https://www.w3schools.com/cssref/sel_attr_contain.asp) | a[href*="w3schools"] | Selects every <a> element whose href attribute value contains the substring "w3schools" |
 
 ## 02_Three Ways to Insert CSS
 
@@ -80,7 +94,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
 <h1>This is a heading</h1>
@@ -92,11 +106,12 @@
 ```css
 /* mystyle.css */
 body {
- background-color: lightblue;
+    background-color: lightblue;
 }
+
 h1 {
- color: navy;
- margin-left: 20px;
+    color: navy;
+    margin-left: 20px;
 }
 ```
 
@@ -106,15 +121,16 @@ h1 {
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: linen;
-}
-h1 {
-  color: maroon;
-  margin-left: 40px;
-}
-</style>
+    <style>
+        body {
+            background-color: linen;
+        }
+
+        h1 {
+            color: maroon;
+            margin-left: 40px;
+        }
+    </style>
 </head>
 <body>
 <h1>This is a heading</h1>
@@ -139,7 +155,8 @@ h1 {
 
 What style will be used when there is more than one style specified for an HTML element?
 
-All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has
+the highest priority:
 
 1. Inline style (inside an HTML element)
 2. External and internal style sheets (in the head section)
@@ -152,13 +169,13 @@ So, an inline style has the highest priority, and will override external and int
 ```css
 /* This is a single-line comment */
 p {
- color: red;
+    color: red;
 }
 ```
 
 ```css
 p {
-  color: red;  /* Set text color to red */
+    color: red; /* Set text color to red */
 }
 ```
 
@@ -167,7 +184,7 @@ p {
 a multi-line
 comment */
 p {
-  color: red;
+    color: red;
 }
 ```
 
@@ -175,11 +192,11 @@ p {
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p {
-  color: red; /* Set text color to red */
-}
-</style>
+    <style>
+        p {
+            color: red; /* Set text color to red */
+        }
+    </style>
 </head>
 <body>
 <h2>My Heading</h2>
@@ -194,12 +211,55 @@ p {
 ## 04_Color
 
 ```css
-Tomato /* CSS Color Names */
-rgb(255, 99, 71) /* RGB */
-rgba(255, 99, 71, 0.5) /* RGBA */
-hsl(9, 100%, 64%) /* HSL */
-hsla(9, 100%, 64%, 0.5) /* HSLA */
-#ff6347 /* HEX */
+Tomato
+    /* CSS Color Names */
+rgb
+
+(
+255
+,
+99
+,
+71
+) /* RGB */
+rgba
+
+(
+255
+,
+99
+,
+71
+,
+0.5
+) /* RGBA */
+hsl
+
+(
+9
+,
+100
+%
+,
+64
+%
+) /* HSL */
+hsla
+
+(
+9
+,
+100
+%
+,
+64
+%
+,
+0.5
+) /* HSLA */
+#ff6347
+
+/* HEX */
 ```
 
 ```html
@@ -231,7 +291,7 @@ style,width,color,radius
 
 side: `border-top-width`
 
-Shorthand 
+Shorthand
 
 - `border-width`
 - `border-style` (required)
@@ -249,18 +309,21 @@ Shorthand
 
 ```css
 p {
-  margin: 25px 50px 75px 100px; /* top right bottom left */
+    margin: 25px 50px 75px 100px; /* top right bottom left */
 }
+
 p {
-  margin: 25px 50px 75px; /* top (right and left) bottom */
+    margin: 25px 50px 75px; /* top (right and left) bottom */
 }
+
 p {
-  margin: 25px 50px; /* (top and bottom) (right and left) */
+    margin: 25px 50px; /* (top and bottom) (right and left) */
 }
+
 div {
-  width: 300px;
-  margin: auto; /* auto value */
-  border: 1px solid red;
+    width: 300px;
+    margin: auto; /* auto value */
+    border: 1px solid red;
 }
 ```
 
@@ -286,11 +349,9 @@ max-width
 
 ```css
 div {
-  max-width: 500px;
+    max-width: 500px;
 }
 ```
-
-
 
 ## 09_Box Model
 
@@ -355,7 +416,7 @@ Text Shadow
 
 ```css
 .p {
-  font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 ```
 
@@ -363,9 +424,9 @@ Text Shadow
 
 ```css
 p {
-  font-style: normal; /* other values: italic, oblique */
-  font-weight: normal; /* other values: bold */
-  font-variant: normal; /* other values: small-caps */
+    font-style: normal; /* other values: italic, oblique */
+    font-weight: normal; /* other values: bold */
+    font-variant: normal; /* other values: small-caps */
 }
 
 ```
@@ -374,19 +435,20 @@ p {
 
 ```css
 h1 {
-  font-size: 40px;
+    font-size: 40px;
 }
 ```
 
 - Font Shorthand
 
-  - `font-style`
-  - `font-variant`
-  - `font-weight`
-  - `font-size/line-height`
-  - `font-family`
+    - `font-style`
+    - `font-variant`
+    - `font-weight`
+    - `font-size/line-height`
+    - `font-family`
 
-  **Note:** The `font-size` and `font-family` values are required. If one of the other values is missing, their default value are used.
+  **Note:** The `font-size` and `font-family` values are required. If one of the other values is missing, their default
+  value are used.
 
 ## 13_Icon
 
@@ -403,16 +465,19 @@ The four links states are:
 
 ```css
 ul.a {
-  list-style-type: circle; /* other values: square, upper-roman, lower-alpha */
+    list-style-type: circle; /* other values: square, upper-roman, lower-alpha */
 }
+
 ul {
-  list-style-image: url('sqpurple.gif');
+    list-style-image: url('sqpurple.gif');
 }
+
 ul.a {
-  list-style-position: outside; /* other values: inside */
+    list-style-position: outside; /* other values: inside */
 }
+
 ul {
-  list-style: square inside url("sqpurple.gif");
+    list-style: square inside url("sqpurple.gif");
 }
 ```
 
@@ -474,7 +539,8 @@ The `float` property can have one of the following values:
 - `none` - The element does not float (will be displayed just where it occurs in the text). This is default
 - `inherit` - The element inherits the float value of its parent
 
-When we use the `float` property, and we want the next element below (not on right or left), we will have to use the `clear` property.
+When we use the `float` property, and we want the next element below (not on right or left), we will have to use
+the `clear` property.
 
 The `clear` property specifies what should happen with the element that is next to a floating element.
 
