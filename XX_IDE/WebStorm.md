@@ -1,5 +1,17 @@
-# 同步 WebStorm 配置
+# [Share IDE settings](https://www.jetbrains.com/help/webstorm/sharing-your-ide-settings.html)
 
-## 1、新建仓库
+- [settings repository](https://www.jetbrains.com/help/webstorm/sharing-your-ide-settings.html#settings-repository)
 
-新建一个 git 仓库用来存放配置，![img](https://liuxy0551.gitee.io/image-hosting/posts/webstorm-settings-repository/1.png)这里选的是 Github，生成一个 Token，稍后需要使用。
+- [在不同电脑间同步 WebStorm 配置](https://liuxianyu.cn/article/webstorm-settings-repository.html)
+
+# Recommend plugins
+
+Chinese (Simplified) Language Pack
+
+CodeGlance
+
+## GitToolBox
+
+## Key Promoter X
+
+## Rainbow Brackets
