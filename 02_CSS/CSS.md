@@ -1,8 +1,12 @@
+# CSS Basic
+
 ## 00_Syntax
 
 <img src="https://www.w3schools.com/css/img_selector.gif" alt="CSS selector" align="left"/>
 
 ## 01_Selector
+
+### [Simple selectors](https://www.w3schools.com/css/css_selectors.asp)
 
 | [Simple selectors](https://www.w3schools.com/css/css_selectors.asp) | Example    | Example description                             |
 | :----------------------------------------------------------- | ---------- | :---------------------------------------------- |
@@ -13,6 +17,8 @@
 | *[element](https://www.w3schools.com/cssref/sel_element.asp)* | p          | Selects all <p> elements                        |
 | *[element,element,..](https://www.w3schools.com/cssref/sel_element_comma.asp)* | div, p     | Selects all <div> elements and all <p> elements |
 
+### [Combinator selectors](https://www.w3schools.com/css/css_combinators.asp)
+
 | [Combinator selectors](https://www.w3schools.com/css/css_combinators.asp) | Example | Example description                                          |
 | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
 | [*element element*](https://www.w3schools.com/cssref/sel_element_element.asp) | div p   | Selects all <p> elements inside <div> elements               |
@@ -20,7 +26,9 @@
 | [*element+element*](https://www.w3schools.com/cssref/sel_element_pluss.asp) | div + p | Selects the first <p> element that are placed immediately after <div> elements |
 | [*element1~element2*](https://www.w3schools.com/cssref/sel_gen_sibling.asp) | p ~ ul  | Selects every <ul> element that are preceded by a <p> element |
 
-| Pseudo classes Selectors                                     | Example               | Example description                                          |
+### [Pseudo-class selectors](https://www.w3schools.com/css/css_pseudo_classes.asp)
+
+| [Pseudo-class selectors](https://www.w3schools.com/css/css_pseudo_classes.asp) | Example               | Example description                                          |
 | :----------------------------------------------------------- | :-------------------- | :----------------------------------------------------------- |
 | [:active](https://www.w3schools.com/cssref/sel_active.asp)   | a:active              | Selects the active link                                      |
 | [:checked](https://www.w3schools.com/cssref/sel_checked.asp) | input:checked         | Selects every checked <input> element                        |
@@ -54,7 +62,9 @@
 | [:valid](https://www.w3schools.com/cssref/sel_valid.asp)     | input:valid           | Selects all <input> elements with a valid value              |
 | [:visited](https://www.w3schools.com/cssref/sel_visited.asp) | a:visited             | Selects all visited links                                    |
 
-| Pseudo elements electors                                     | Example         | Example description                                          |
+### [Pseudo-elements selectors](https://www.w3schools.com/css/css_pseudo_elements.asp)
+
+| [Pseudo-elements selectors](https://www.w3schools.com/css/css_pseudo_elements.asp) | Example         | Example description                                          |
 | :----------------------------------------------------------- | :-------------- | :----------------------------------------------------------- |
 | [::after](https://www.w3schools.com/cssref/sel_after.asp)    | p::after        | Insert content after every <p> element                       |
 | [::before](https://www.w3schools.com/cssref/sel_before.asp)  | p::before       | Insert content before every <p> element                      |
@@ -62,7 +72,9 @@
 | [::first-line](https://www.w3schools.com/cssref/sel_firstline.asp) | p::first-line   | Selects the first line of every <p> element                  |
 | [::selection](https://www.w3schools.com/cssref/sel_selection.asp) | p::selection    | Selects the portion of an element that is selected by a user |
 
-| Attribute selectors                                          | Example              | Example description                                          |
+### [Attribute selectors](https://www.w3schools.com/css/css_attribute_selectors.asp)
+
+| [Attribute selectors](https://www.w3schools.com/css/css_attribute_selectors.asp) | Example              | Example description                                          |
 | :----------------------------------------------------------- | :------------------- | :----------------------------------------------------------- |
 | [[*attribute*\]](https://www.w3schools.com/cssref/sel_attribute.asp) | [target]             | Selects all elements with a target attribute                 |
 | [[*attribute*=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value.asp) | [target=_blank]      | Selects all elements with target="_blank"                    |
@@ -74,7 +86,7 @@
 
 ## 02_Three Ways to Insert CSS
 
-- External CSS
+### External CSS
 
 ```html
 <!DOCTYPE html>
@@ -100,7 +112,7 @@ h1 {
 }
 ```
 
-- Internal CSS
+### Internal CSS
 
 ```html
 <!DOCTYPE html>
@@ -123,7 +135,7 @@ h1 {
 </html>
 ```
 
-- Inline CSS
+### Inline CSS
 
 ```html
 <!DOCTYPE html>
@@ -135,7 +147,7 @@ h1 {
 </html>
 ```
 
-- Cascading Order
+### Cascading Order
 
 What style will be used when there is more than one style specified for an HTML element?
 
@@ -202,15 +214,6 @@ hsla(9, 100%, 64%, 0.5) /* HSLA */
 #ff6347 /* HEX */
 ```
 
-```html
-CSS Background Color
-<h1 style="background-color:DodgerBlue;">Hello World</h1>
-CSS Text Color
-<h1 style="color:Tomato;">Hello World</h1>
-CSS Border Color
-<h1 style="border:2px solid Tomato;">Hello World</h1>
-```
-
 ## 05_Background
 
 | Property                                                     | Description                                                  |
@@ -227,25 +230,17 @@ CSS Border Color
 
 ## 06_Border
 
-style,width,color,radius
-
-side: `border-top-width`
-
-Shorthand 
-
-- `border-width`
-- `border-style` (required)
-- `border-color`
-
 | Property                                                     | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [border](https://www.w3schools.com/cssref/pr_border.asp)     | Sets all the border properties in one declaration            |
+| [border](https://www.w3schools.com/cssref/pr_border.asp)     | Sets all the border properties in one declaration: `border-width`, `border-style` (required), `border-color` |
 | [border-color](https://www.w3schools.com/cssref/pr_border-color.asp) | Sets the color of the four borders                           |
 | [border-radius](https://www.w3schools.com/cssref/css3_pr_border-radius.asp) | Sets all the four border-*-radius properties for rounded corners |
 | [border-style](https://www.w3schools.com/cssref/pr_border-style.asp) | Sets the style of the four borders                           |
 | [border-width](https://www.w3schools.com/cssref/pr_border-width.asp) | Sets the width of the four borders                           |
 
-## 07_Margin  and Padding
+## 07_Margin and Padding
+
+### Sides
 
 ```css
 p {
@@ -274,7 +269,7 @@ div {
 
 ## 08_Height and Width
 
-Values
+### Values
 
 - `auto` - This is default. The browser calculates the height and width
 - `length` - Defines the height/width in px, cm, etc.
@@ -282,15 +277,13 @@ Values
 - `initial` - Sets the height/width to its default value
 - `inherit` - The height/width will be inherited from its parent value
 
-max-width
+### max-width
 
 ```css
 div {
   max-width: 500px;
 }
 ```
-
-
 
 ## 09_Box Model
 
@@ -313,11 +306,11 @@ CSS has the following outline properties:
 
 ## 11_Text
 
-Text color
+### Text color
 
 - `color`
 
-Text alignment
+### Text alignment
 
 - `text-align`
 - `text-align-last`
@@ -325,7 +318,7 @@ Text alignment
 - `unicode-bidi`
 - `vertical-align`
 
-Text Decoration
+### Text Decoration
 
 - `text-decoration-line`
 - `text-decoration-color`
@@ -333,11 +326,11 @@ Text Decoration
 - `text-decoration-thickness`
 - `text-decoration`
 
-Text Transformation
+### Text Transformation
 
 - `text-transform`
 
-Text Spacing
+### Text Spacing
 
 - `text-indent`
 - `letter-spacing`
@@ -345,13 +338,13 @@ Text Spacing
 - `word-spacing`
 - `white-space`
 
-Text Shadow
+### Text Shadow
 
 - `text-shadow`
 
-## 12_Fonts
+## 12_Font
 
-- Font Family
+### Font Family
 
 ```css
 .p {
@@ -359,7 +352,7 @@ Text Shadow
 }
 ```
 
-- Font Style
+### Font Style
 
 ```css
 p {
@@ -370,7 +363,7 @@ p {
 
 ```
 
-- Font Size
+### Font Size
 
 ```css
 h1 {
@@ -378,17 +371,17 @@ h1 {
 }
 ```
 
-- Font Shorthand
+### Font Shorthand
 
-  - `font-style`
-  - `font-variant`
-  - `font-weight`
-  - `font-size/line-height`
-  - `font-family`
+- `font-style`
+- `font-variant`
+- `font-weight`
+- `font-size/line-height`
+- `font-family`
 
-  **Note:** The `font-size` and `font-family` values are required. If one of the other values is missing, their default value are used.
+**Note:** The `font-size` and `font-family` values are required. If one of the other values is missing, their default value are used.
 
-## 13_Icon
+## [13_Icon](`border-color`)
 
 ## 14_Link
 
@@ -398,6 +391,25 @@ The four links states are:
 - `a:visited` - a link the user has visited
 - `a:hover` - a link when the user mouses over it
 - `a:active` - a link the moment it is clicked
+
+```css
+/* unvisited link */
+a:link {
+  color: red;
+}
+/* visited link */
+a:visited {
+  color: green;
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+/* selected link */
+a:active {
+  color: blue;
+}
+```
 
 ## 15_List
 
@@ -416,23 +428,26 @@ ul {
 }
 ```
 
-## 16_Table
-
 | Property                                                     | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [border](https://www.w3schools.com/cssref/pr_border.asp)     | Sets all the border properties in one declaration            |
-| [border-collapse](https://www.w3schools.com/cssref/pr_border-collapse.asp) | Specifies whether or not table borders should be collapsed   |
-| [border-spacing](https://www.w3schools.com/cssref/pr_border-spacing.asp) | Specifies the distance between the borders of adjacent cells |
-| [caption-side](https://www.w3schools.com/cssref/pr_tab_caption-side.asp) | Specifies the placement of a table caption                   |
-| [empty-cells](https://www.w3schools.com/cssref/pr_tab_empty-cells.asp) | Specifies whether or not to display borders and background on empty cells in a table |
-| [table-layout](https://www.w3schools.com/cssref/pr_tab_table-layout.asp) | Sets the layout algorithm to be used for a table             |
+| [list-style](https://www.w3schools.com/cssref/pr_list-style.asp) | Sets all the properties for a list in one declaration        |
+| [list-style-image](https://www.w3schools.com/cssref/pr_list-style-image.asp) | Specifies an image as the list-item marker                   |
+| [list-style-position](https://www.w3schools.com/cssref/pr_list-style-position.asp) | Specifies the position of the list-item markers (bullet points) |
+| [list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp) | Specifies the type of list-item marker                       |
+
+## [16_Table](https://www.w3schools.com/css/css_table.asp)
 
 ## 17_Display
 
-| Property                                                     | Description                                           |
-| :----------------------------------------------------------- | :---------------------------------------------------- |
-| [display](https://www.w3schools.com/cssref/pr_class_display.asp) | Specifies how an element should be displayed          |
-| [visibility](https://www.w3schools.com/cssref/pr_class_visibility.asp) | Specifies whether or not an element should be visible |
+| Property                                                     | Description                                           | Value        | Description                                                  |
+| :----------------------------------------------------------- | :---------------------------------------------------- | ------------ | ------------------------------------------------------------ |
+| [display](https://www.w3schools.com/cssref/pr_class_display.asp) | Specifies how an element should be displayed          | inline       | Displays an element as an inline element (like <span>). Any height and width properties will have no effect |
+|                                                              |                                                       | block        | Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width |
+|                                                              |                                                       | inline-block | Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values |
+|                                                              |                                                       | none         | The element is completely removed                            |
+| [visibility](https://www.w3schools.com/cssref/pr_class_visibility.asp) | Specifies whether or not an element should be visible | visible      | Default value. The element is visible                        |
+|                                                              |                                                       | hidden       | The element is hidden (but still takes up space)             |
+|                                                              |                                                       | collapse     | Only for table rows (<tr>), row groups (<tbody>), columns (<col>), column groups (<colgroup>). This value removes a row or column, but it does not affect the table layout. The space taken up by the row or column will be available for other content.If collapse is used on other elements, it renders as "hidden" |
 
 ## 18_max-width
 
@@ -440,12 +455,12 @@ ul {
 
 | Property                                                     | Description                                      |
 | :----------------------------------------------------------- | :----------------------------------------------- |
-| [bottom](https://www.w3schools.com/cssref/pr_pos_bottom.asp) | Sets the bottom margin edge for a positioned box |
-| [clip](https://www.w3schools.com/cssref/pr_pos_clip.asp)     | Clips an absolutely positioned element           |
-| [left](https://www.w3schools.com/cssref/pr_pos_left.asp)     | Sets the left margin edge for a positioned box   |
-| [position](https://www.w3schools.com/cssref/pr_class_position.asp) | Specifies the type of positioning for an element |
-| [right](https://www.w3schools.com/cssref/pr_pos_right.asp)   | Sets the right margin edge for a positioned box  |
 | [top](https://www.w3schools.com/cssref/pr_pos_top.asp)       | Sets the top margin edge for a positioned box    |
+| [bottom](https://www.w3schools.com/cssref/pr_pos_bottom.asp) | Sets the bottom margin edge for a positioned box |
+| [left](https://www.w3schools.com/cssref/pr_pos_left.asp)     | Sets the left margin edge for a positioned box   |
+| [right](https://www.w3schools.com/cssref/pr_pos_right.asp)   | Sets the right margin edge for a positioned box  |
+| [position](https://www.w3schools.com/cssref/pr_class_position.asp) | Specifies the type of positioning for an element |
+| [clip](https://www.w3schools.com/cssref/pr_pos_clip.asp)     | Clips an absolutely positioned element           |
 
 ## 20_Z-index
 
@@ -486,4 +501,4 @@ The `clear` property can have one of the following values:
 - `both` - The element is pushed below both left and right floated elements
 - `inherit` - The element inherits the clear value from its parent
 
-## 23_inline-block
+## 23_inline-block+
