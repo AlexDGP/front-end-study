@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>12_事件之阻止冒泡(或捕获)</title>
+	</head>
+	<body>
+		<div>div <button>btn</button></div>
+		<script>
+			var btn = document.querySelector("button");
+			var div = document.querySelector("div");
+			var body = document.querySelector("body");
+			var fn = function () {
+				alert(this + "触发了");
+				var ev = window.event || arguments[0];
+				ev.stopPropagation(); // 阻止事件冒泡(或捕获) DOM浏览器
+				ev.cancelBubble = false; // 阻止事件冒泡(或捕获) DOM浏览器与IE浏览器
+			};
+			// addEventListener 第三个参数默认是false代表冒泡(从里向外), true代表捕获(从外向里)
+			btn.addEventListener("click", fn, false);
+			div.addEventListener("click", fn, false);
+			body.addEventListener("click", fn, false);
+		</script>
+	</body>
+</html>

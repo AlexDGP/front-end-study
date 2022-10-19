@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>07_表单元素节点的值</title>
+	</head>
+	<body>
+		<input type="text" id="userName" />
+		<input type="checkbox" id="gender" />
+
+		<button id="btn">点击</button>
+		<div id="box"></div>
+		<script>
+			var btn = document.getElementById("btn");
+			var gender = document.getElementById("gender");
+			var userName = document.getElementById("userName");
+			btn.onclick = function () {
+				console.dir(userName);
+				console.log(userName.value);
+				box.innerHTML = "<h2>" + userName.value + "</h2>";
+				console.dir(gender);
+				gender.checked = true;
+			};
+		</script>
+	</body>
+</html>

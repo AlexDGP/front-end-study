@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwebpack_project=self.webpackChunkwebpack_project||[]).push([[179],{662:function(e,n,o){function c(e,n){return e-n}console.log(c(2,1)),console.log(function(){for(var e=arguments.length,n=new Array(e),o=0;o<e;o++)n[o]=arguments[o];return n.reduce(((e,n)=>e+n),0)}(1,2,3,4)),console.log(add(5,5)),document.getElementById("btn").onClick=function(){o.e(600).then(o.bind(o,212)).then((e=>{let{add:n}=e;console.log(c(2,1))}))}}},function(e){var n;n=662,e(e.s=n)}]);
+//# sourceMappingURL=main.bce502c7.js.map

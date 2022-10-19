@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>01_BOM简介</title>
+	</head>
+	<body>
+		<script>
+			// BOM(Browser Object Model 浏览器对象模型),核心对象是window
+			// BOM缺乏标准,BOM最初是由Netscape浏览器标准的一部分(JavaScript是标准化组织是ECMA,DOM标准化组织是W3C)
+			// window包含document,location,navigation,screen,history
+			console.log(document === window.document); // true
+
+			var num = 10;
+			console.log(num === window.num); // true
+
+			function fn() {
+				console.log("fn方法");
+			}
+			console.log(fn === window.fn); // true
+
+			console.dir(window);
+
+			// 最好别把变量名取成name,因为window中内置有name的变量
+			// var name = "alex";
+			console.log(window.name); // name === ""
+		</script>
+	</body>
+</html>

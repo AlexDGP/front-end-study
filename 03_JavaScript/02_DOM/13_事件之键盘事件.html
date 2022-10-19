@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>13_事件之键盘事件</title>
+	</head>
+	<body>
+		<input
+			type="text"
+			onkeydown="downFn(this)"
+			onkeyup="upFn(this)"
+			onkeypress="pressFn(this)"
+		/>
+		<script>
+			// 按下字符键三个事件都触发,按下功能键值触发onkeydown和onkeyup
+			//        键盘编码(onkeydown/onkeyup)        字符编码(onkeypress)
+			//            keyCode charCode                keyCode charCode
+			// 字符键a        65      0                      97     97
+			// 字符键A        65      0                      97     97
+			// 字符键Z        90      0                      122    122
+			// 空格           32      0                      32     32
+			// 下             40      0                      功能键不触发
+			function downFn(obj) {
+				var ev = window.event || arguments[0];
+				console.log(ev);
+				console.log("downFn");
+				console.log(obj);
+			}
+
+			function upFn(obj) {
+				var ev = window.event || arguments[0];
+				console.log(ev);
+				console.log("upFn");
+				console.log(obj);
+			}
+
+			function pressFn(obj) {
+				var ev = window.event || arguments[0];
+				console.log(ev);
+				console.log("pressFn");
+				console.log(obj);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+.box1 {
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+.box3 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+.box5 {
+	width: 100px;
+	height: 100px;
+	background-image: url("../images/1.jpeg");
+	background-size: cover;
+}
+.box6 {
+	width: 100px;
+	height: 100px;
+	background-image: url("../images/2.png");
+	background-size: cover;
+}
+.box7 {
+	width: 100px;
+	height: 100px;
+	background-image: url("../images/3.gif");
+	background-size: cover;
+}

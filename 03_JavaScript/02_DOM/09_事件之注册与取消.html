@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>09_事件之注册与取消</title>
+	</head>
+	<body>
+		<button id="btn0" onclick="show('info')">button0</button>
+		<button id="btn1">button1</button>
+		<button id="btn2">button2</button>
+		<script>
+			function show(str) {
+				alert("show" + " " + str);
+			}
+			var btn1 = document.querySelector("#btn1");
+			var btn2 = document.querySelector("#btn2");
+			var fn = function () {
+				alert("show");
+			};
+			btn1.onclick = fn; // 传统事件注册方式 btn1.onclick传统注册事件方式只能写一次,如果有多个,最后一个btn1.onclick会覆盖前面的注册事件,以最后一个为准
+			btn1.onclick = null; // 传统事件取消
+			btn2.addEventListener("click", fn); // 现代事件注册方式
+			btn2.removeEventListener("click", fn); // 现代事件取消
+		</script>
+	</body>
+</html>

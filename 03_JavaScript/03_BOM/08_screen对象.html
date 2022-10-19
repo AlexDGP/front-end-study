@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>08_screen对象</title>
+	</head>
+	<body>
+		<script>
+			// Screen 对象包含有关客户端显示屏幕的信息。
+			// Note注意： 没有应用于 screen 对象的公开标准，不过所有浏览器都支持该对象。
+			console.log(screen === window.screen); // true
+
+			console.log(screen.availHeight); // availHeight	返回屏幕的高度（不包括Windows任务栏）
+			console.log(screen.availWidth); // availWidth	返回屏幕的宽度（不包括Windows任务栏）
+
+			console.log(screen.height); // height	返回屏幕的总高度
+			console.log(screen.width); // width	返回屏幕的总宽度
+
+			console.log(screen.colorDepth); // colorDepth	返回目标设备或缓冲器上的调色板的比特深度
+			console.log(screen.pixelDepth); // pixelDepth	返回屏幕的颜色分辨率（每象素的位数）
+		</script>
+	</body>
+</html>

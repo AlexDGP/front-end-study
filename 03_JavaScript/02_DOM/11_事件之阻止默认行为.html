@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>11_事件之阻止默认行为</title>
+	</head>
+	<body>
+		<a href="10_事件的冒泡与捕获.html">跳转到10_事件的冒泡与捕获.html</a>
+		<script>
+			var a = document.querySelector("a");
+			var showFn = function () {
+				var ev = window.event || arguments[0];
+				if (true) {
+					alert("阻止默认行为");
+					ev.preventDefault(); // 阻止默认行为 DOM浏览器
+					ev.returnValue = false; // 阻止默认行为 DOM浏览器与IE浏览器
+				}
+			};
+			a.addEventListener("click", showFn);
+		</script>
+	</body>
+</html>

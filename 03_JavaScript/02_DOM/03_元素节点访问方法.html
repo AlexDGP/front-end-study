@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>03_元素节点访问方法</title>
+	</head>
+	<body>
+		<div>div</div>
+		<h2>h2</h2>
+		<h3 class="myH3">h3</h3>
+		<h4 id="myH4">h4</h4>
+		<h5 name="myH5">h5</h5>
+		<input type="text" name="username" />
+		<input type="text" name="password" />
+		<script>
+			var myH2 = document.getElementsByTagName("h2"); // HTMLCollection
+			console.log(myH2);
+			var myH3 = document.getElementsByClassName("myH3"); // HTMLCollection
+			console.log(myH3);
+			var myH4 = document.getElementById("myH4"); // Element
+			console.log(myH4);
+			var myH5 = document.getElementsByName("myH5"); // NodeList
+			console.log(myH5);
+
+			// querySelector(css选择器) 返回的是具体的某一个元素
+			var myQH3 = document.querySelector("h3");
+			console.log(myQH3);
+			var myQInput = document.querySelector("input");
+			console.log(myQInput);
+			var myQH4 = document.querySelector("#myH4");
+			console.log(myQH4);
+
+			// querySelectorAll(css选择器) 返回一个集合 NodeList
+			var myQInputs = document.querySelectorAll("input");
+			console.log(myQInputs);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>04_创建添加删除插入克隆元素节点</title>
+		<style>
+			#box1 {
+				width: 500px;
+				height: 100px;
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn0" onclick="addEle()">创建元素节点</button>
+		<button id="btn1" onclick="removeEle()">删除元素节点</button>
+		<button id="btn2" onclick="replaceEle()">替换元素节点</button>
+		<button id="btn3" onclick="insertEle()">插入元素节点</button>
+		<button id="btn4" onclick="cloneEle()">克隆元素节点</button>
+		<div id="box1"></div>
+		<script>
+			var box1 = document.getElementById("box1");
+			function addEle() {
+				var newNode = document.createElement("h2"); // 创建元素节点 createElement()
+				var newTextNode = document.createTextNode("我是document创建的H2"); // 创建文本节点 createTextNode()
+				newNode.appendChild(newTextNode); // 添加元素 appendChild()
+				box1.appendChild(newNode); // 添加元素 appendChild()
+			}
+			function removeEle() {
+				var removedNode = box1.querySelector("h2");
+				box1.removeChild(removedNode); // 删除元素 removeChild()
+			}
+			function replaceEle() {
+				var node0 = box1.querySelector("h2");
+				var node1 = document.createElement("h1");
+				var newTextNode = document.createTextNode("我是document创建的H1");
+				node1.appendChild(newTextNode);
+				box1.replaceChild(node1, node0); // 替换元素 replaceChild(node1, node0) 用node1替换node0
+			}
+			function insertEle() {
+				var node0 = box1.querySelector("h2");
+				var node1 = document.createElement("h1");
+				var newTextNode = document.createTextNode("我是document创建的H1");
+				node1.appendChild(newTextNode);
+				box1.insertBefore(node1, node0); // 插入元素 insertBefore(node1, node0) 在node0前面插入node1
+			}
+			function cloneEle() {
+				var node0 = box1.querySelector("h2");
+				var cloneNode = node0.cloneNode(true); // cloneNode(deep?: Boolean) true 深拷贝
+				var cloneNode = node0.cloneNode(false); // cloneNode(deep?: Boolean) false 浅拷贝
+				box1.appendChild(cloneNode);
+			}
+		</script>
+	</body>
+</html>

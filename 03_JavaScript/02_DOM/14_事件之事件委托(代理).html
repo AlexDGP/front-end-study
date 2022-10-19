@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>14_事件之事件委托(代理)</title>
+		<style>
+			#contanier {
+				width: 700px;
+				margin: 0 auto;
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="contanier">
+			<input type="text" id="userName" />
+			<input type="text" id="age" />
+			<input type="text" id="tel" />
+			<button id="btn">添加</button>
+			<table border="1" width="575" id="myTab">
+				<tr>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>电话</th>
+					<th>操作</th>
+				</tr>
+			</table>
+		</div>
+		<script>
+			var userName = document.querySelector("#userName");
+			var age = document.querySelector("#age");
+			var tel = document.querySelector("#tel");
+			var myTab = document.querySelector("#myTab");
+			var btn = document.querySelector("#btn");
+			btn.addEventListener("click", function () {
+				myTab.innerHTML += `<tr>
+                              <td>${userName.value}</td>
+                              <td>${age.value}</td>
+                              <td>${tel.value}</td>
+                              <td><span onclick = "deleteFn(this)" class="delete">删除</span></td>
+                            </tr>`;
+				userName.value = "";
+				age.value = "";
+				tel.value = "";
+			});
+
+			// 事件直接绑定在元素上
+			function deleteFn(obj) {
+				// var targetParentNode = obj.parentNode.parentNode;
+				// targetParentNode.remove();
+			}
+
+			// 利用事件代理(或委托),把事件绑定在其父元素上,利用冒泡原则触发事件
+			myTab.onclick = function () {
+				var e = window.event || arguments[0];
+				var target = e.target;
+				if (target.className === "delete") {
+					var targetParentNode = target.parentNode.parentNode;
+					targetParentNode.remove();
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>03_定时器</title>
+	</head>
+	<body>
+		<button class="clearTimeout">clearTimeout</button>
+		<button class="clearInterval">clearInterval</button>
+		<script>
+			// setTimeout(function () {}, num); num毫秒后,调用函数
+			console.log(setTimeout === window.setTimeout); // true
+			var setTimeoutID = setTimeout(function () {
+				console.log("setTimeout定时器");
+			}, 2000);
+
+			// setInterval(function () {}, num); 每隔num毫秒,调用函数
+			console.log(setInterval === window.setInterval); // true
+			var setIntervalID = setInterval(function () {
+				console.log("setInterval定时器");
+			}, 2000);
+
+			// clearTimeout()取消定时器 可以取消setTimeout和setInterval
+			var btnClearTimeout = document.querySelector(".clearTimeout");
+			btnClearTimeout.addEventListener("click", function () {
+				clearTimeout(setTimeoutID);
+			});
+
+			// clearInterval()取消定时器 可以取消setTimeout和setInterval
+			var btnClearInterval = document.querySelector(".clearInterval");
+			btnClearInterval.addEventListener("click", function () {
+				clearInterval(setIntervalID);
+			});
+		</script>
+	</body>
+</html>

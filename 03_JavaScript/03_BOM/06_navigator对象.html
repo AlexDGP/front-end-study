@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>06_navigator对象</title>
+	</head>
+	<body>
+		<script>
+			// Navigator 对象包含有关浏览器的信息
+			// Note注意： 没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象
+			// navigator对象包含有关浏览器的信息,它有很多属性,最常见的是userAgent,返回由客户机发送服务器的user-agent头部的值
+			console.log(navigator === window.navigator); // true
+			console.log(navigator.appCodeName); // appCodeName	返回浏览器的代码名 Mozilla
+			console.log(navigator.appName); // appName	返回浏览器的名称 Netscape
+			console.log(navigator.appVersion); // appVersion	返回浏览器的平台和版本信息 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0
+			console.log(navigator.cookieEnabled); // cookieEnabled	返回指明浏览器中是否启用 cookie 的布尔值 true
+			console.log(navigator.platform); // platform	返回运行浏览器的操作系统平台 Win32
+			console.log(navigator.userAgent); // userAgent	返回由客户机发送服务器的user-agent 头部的值 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+		</script>
+	</body>
+</html>

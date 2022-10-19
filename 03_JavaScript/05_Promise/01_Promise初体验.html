@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>01_Promise初体验</title>
+	</head>
+	<body>
+		<div>
+			<h2 class="page-header">01_Promise初体验</h2>
+			<button class="btn btn-primary" id="btn">点击抽奖</button>
+		</div>
+		<script>
+			// Promise 是一个 ECMAScript 6 提供的类，目的是更加优雅地书写复杂的异步任务。
+			// 由于 Promise 是 ES6 新增加的，所以一些旧的浏览器并不支持，苹果的 Safari 10 和 Windows 的 Edge 14 版本以上浏览器才开始支持 ES6 特性。
+
+			// 随机生成从m到n之间的整数
+			function rand(m, n) {
+				return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+			}
+			const btn = document.querySelector("#btn");
+
+			// 30%中奖,1秒后出结果
+			// btn.addEventListener("click", function () {
+			// 	setTimeout(() => {
+			// 		let n = rand(1, 100);
+			// 		if (n <= 30) {
+			// 			alert("恭喜中奖");
+			// 		} else {
+			// 			alert("没有中奖");
+			// 		}
+			// 	}, 1000);
+			// });
+
+			// 用Promise封装
+			btn.addEventListener("click", function () {
+				const p = new Promise((resolve, reject) => {
+					setTimeout(() => {
+						let n = rand(1, 100);
+						if (n <= 30) {
+							resolve(n);
+						} else {
+							reject(n);
+						}
+					}, 1000);
+				});
+				// 调用promise.then()
+				p.then(
+					(value) => {
+						alert("恭喜中奖,号码:" + value);
+					},
+					(reason) => {
+						alert("没有中奖,号码:" + reason);
+					}
+				);
+			});
+		</script>
+	</body>
+</html>

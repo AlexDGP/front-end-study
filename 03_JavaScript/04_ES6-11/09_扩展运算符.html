@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script>
+			// 01_扩展运算符"..."能将 数组 转换为逗号分割的参数序列
+			let team = ["Ronaldo", "Zidane", "Beckham"];
+			function show() {
+				console.log(arguments);
+			}
+			show(...team); // [Arguments] { '0': 'Ronaldo', '1': 'Zidane', '2': 'Beckham' }
+
+			// 02_扩展运算符的运用,数组合并
+			let team1 = ["Ronaldo", "Zidane", "Beckham"];
+			let team2 = ["Figo", "Raul", "Owen"];
+			// 传统方法实现数组合并
+			console.log(team1.concat(team2)); // [ 'Ronaldo', 'Zidane', 'Beckham', 'Figo', 'Raul', 'Owen' ]
+			// 拓展运算符实现数组合并
+			let newTeam = [...team1, ...team2];
+			console.log(newTeam); // [ 'Ronaldo', 'Zidane', 'Beckham', 'Figo', 'Raul', 'Owen' ]
+
+			// 03_扩展运算符的运用,数组克隆
+			let team3 = [...team1];
+			console.log(team3); // [ 'Ronaldo', 'Zidane', 'Beckham' ]
+
+			// 04_扩展运算符的运用,将伪数组转化为数组
+			let divs = document.querySelectorAll("div");
+			let divArr = [...divs]; // [div, div, div]
+			console.log(divArr);
+		</script>
+	</body>
+</html>

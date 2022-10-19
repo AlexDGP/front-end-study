@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>01_DOM简介</title>
+	</head>
+	<body>
+		第一行文字
+		<div>
+			div标签
+			<p>p标签</p>
+		</div>
+		<h2>h2标签</h2>
+		文字
+		<a href="">a标签</a>
+		<h4>h4标签</h4>
+		<!-- 注释 -->
+		<script>
+			// // DOM中最大的节点 文档级别节点
+			// console.log(document);
+			// console.log(document.documentElement);
+			// console.log(document.head);
+			// console.log(document.title);
+			// console.log(document.body);
+
+			// // 更改title
+			// document.title = "newTitle";
+			// console.log(document.title);
+
+			// // 子节点
+			// console.log(document.body.childNodes); // 返回NodeList 类数组
+			// console.log(document.body.childNodes.length); // 返回NodeList长度
+			// console.log(document.body.childNodes[1]); // 访问索引为1的节点
+
+			// 节点类型
+			//            元素节点  属性节点 文本节点  注释节点
+			// nodeType     1       2         3       8
+			// nodeName   元素名    属性名   #text   #comment
+			// nodeValue   null    属性值   文本内容  注释文本
+			// for (let index = 0; index < document.body.childNodes.length; index++) {
+			// 	const element = document.body.childNodes[index];
+			// 	console.log(element.nodeType);
+			// 	console.log(element.nodeName);
+			// 	console.log(element.nodeValue);
+			// 	console.log("========");
+			// }
+
+			// // 返回元素子节点(不包括文本节点和注释节点) HTMLCollection(5) [div, h2, a, h4, script]
+			// console.log(document.body.children);
+
+			// // 返回元素子节点的长度
+			// console.log(document.body.childElementCount);
+
+			// // 判断是否有子节点(包括文本节点和注释节点)
+			// console.log(document.body.children[0].hasChildNodes());
+			// console.log(document.body.children[1].hasChildNodes());
+		</script>
+	</body>
+</html>

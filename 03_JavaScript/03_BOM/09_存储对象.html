@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// Web 存储 API 提供了 sessionStorage （会话存储） 和 localStorage（本地存储）两个存储对象来对网页的数据进行添加、删除、修改、查询操作。
+			// localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去除。大约20M
+			// sessionStorage 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。大约5M
+
+			// Web 存储 API
+			// window.localStorage	在浏览器中存储 key/value 对。没有过期时间。
+			// window.sessionStorage	在浏览器中存储 key/value 对。 在关闭窗口或标签页之后将会删除这些数据。
+
+			// length	返回存储对象中包含多少条数据。
+			console.log(localStorage.length);
+			console.log(sessionStorage.length);
+
+			// 存储对象方法
+			localStorage.setItem("username", "Alex"); // setItem(keyname, value)	添加键和值，如果对应的值存在，则更新该键对应的值。
+			console.log(localStorage.key(0)); // key(n)	返回存储对象中第 n 个键的名称(从0开始)
+			console.log(localStorage.getItem("username")); // getItem(keyname)	返回指定键的值
+			localStorage.removeItem("username"); // removeItem(keyname)	移除键
+			localStorage.clear(); // clear()	清除存储对象中所有的键
+		</script>
+	</body>
+</html>

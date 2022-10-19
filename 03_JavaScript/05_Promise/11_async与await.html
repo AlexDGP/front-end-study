@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			async function main() {
+				// 01 return 一个非Promise
+				// return "Not Promise";
+				// 02 return Promise
+				// return new Promise((resolve, reject) => {
+				// 	reject("NO");
+				// });
+				// 03 throw
+				// throw "error";
+
+				var p = new Promise((resolve, reject) => {
+					resolve("YES");
+					// reject("NO");
+				});
+				try {
+					var res = await p;
+				} catch (error) {
+					console.log(error);
+				}
+				console.log(res);
+			}
+			let result = main();
+			console.log(result);
+		</script>
+	</body>
+</html>

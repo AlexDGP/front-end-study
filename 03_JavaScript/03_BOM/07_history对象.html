@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>07_history对象</title>
+	</head>
+	<body>
+		<button class="back">后退</button>
+		<button class="forward">前进</button>
+		<script>
+			// History 对象包含用户（在浏览器窗口中）访问过的 URL。
+			// History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。
+			// Note注意： 没有应用于History对象的公开标准，不过所有浏览器都支持该对象。
+			console.log(history === window.history); // true
+
+			// history.length
+			console.log(history.length);
+
+			// history.back()
+			// history.forward()
+			// history.go(1);
+			var back = document.querySelector(".back");
+			back.addEventListener("click", function () {
+				history.back();
+				// history.go(-1); // 前进一步
+			});
+			var forward = document.querySelector(".forward");
+			forward.addEventListener("click", function () {
+				history.forward();
+				// history.go(1); // 前进一步
+			});
+		</script>
+	</body>
+</html>

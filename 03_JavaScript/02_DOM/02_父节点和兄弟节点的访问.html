@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>02_父节点和兄弟节点的访问</title>
+	</head>
+	<body>
+		第一行文字
+		<div>
+			div标签
+			<p>p标签</p>
+		</div>
+		<h2>h2标签</h2>
+		文字
+		<a href="">a标签</a>
+		<h4>h4标签</h4>
+		<!-- 注释 -->
+		<script>
+			// 返回 第一个/最后一个 子节点(包含文本节点)
+			console.log(document.body.firstChild);
+			console.log(document.body.lastChild);
+
+			// 返回第一个/最后一个 元素子节点(不包含文本节点)
+			console.log(document.body.firstElementChild);
+			console.log(document.body.lastElementChild);
+
+			// 父元素
+			console.log(document.body.children[0].parentNode); // 父节点
+			console.log(document.body.children[0].parentElement); // 父元素节点
+
+			// 下一个兄弟节点
+			console.log(document.body.children[0].nextSibling); // 下一个兄弟节点
+			console.log(document.body.children[0].nextElementSibling); // 下一个兄弟元素节点
+
+			// 上一个兄弟节点
+			console.log(document.body.children[0].previousSibling); // 上一个兄弟节点
+			console.log(document.body.children[0].previousElementSibling); // 上一个兄弟元素节点
+		</script>
+	</body>
+</html>

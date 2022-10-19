@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>02_window对象事件</title>
+	</head>
+	<body>
+		<script>
+			// window.addEventListener("load", function () {});
+			// load事件在window已经加载完毕时触发
+			// 传统事件注册方法 传统事件注册方式只能注册一次,多次的话会被最后一次注册覆盖
+			// window.onload = function () {
+			// 	var btn = document.querySelector("button");
+			// 	btn.onclick = function () {
+			// 		alert("button被点击");
+			// 	};
+			// };
+			// addEventListener事件注册方法
+			// window.addEventListener("load", function () {
+			// 	var btn = document.querySelector("button");
+			// 	btn.addEventListener("click", function () {
+			// 		alert("button被点击");
+			// 	});
+			// });
+
+			// document.addEventListener("DOMContentLoaded", function () {});
+			// DOMContentLoaded事件触发时,仅仅当DOM加载完成,不包括CSS,img,flash等等,IE9以上支持
+			// 图片较多时候,使用DOMContentLoaded事件,比较合适
+			// document.addEventListener("DOMContentLoaded", function () {
+			// 	alert("document.onDOMContentLoaded事件");
+			// });
+
+			// window.addEventListener("resize", function () {});
+			// resize事件,是窗口尺寸调整时触发
+			window.addEventListener("resize", function () {
+				console.log(
+					"innerWidth:" +
+						window.innerWidth +
+						",innerHeight:" +
+						window.innerHeight
+				);
+			});
+		</script>
+		<button>button</button>
+	</body>
+</html>

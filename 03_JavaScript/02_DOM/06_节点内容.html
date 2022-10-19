@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>06_节点内容</title>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<div id="box">
+			<h2>我是h2</h2>
+		</div>
+		<script>
+			var btn = document.querySelector("#btn");
+			var div = document.querySelector("#box");
+			btn.onclick = function () {
+				// console.log(box.innerHTML);
+				// console.log(box.innerText);
+				// box.innerHTML = "<h4>我是h4</h4>";
+				// box.innerText = "<h4>我是h4</h4>";
+				// box.outerHTML = "<p>我是p标签</p>";
+				// box.outerText = "<p>我是p标签</p>";
+			};
+		</script>
+	</body>
+</html>

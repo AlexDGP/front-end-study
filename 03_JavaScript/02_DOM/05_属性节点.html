@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>05_属性节点</title>
+		<style>
+			.show {
+				display: block;
+			}
+			.hide {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn0">点击获取属性</button>
+		<button id="btn1">点击切换隐藏</button>
+		<h2 id="myh2" class="myBox" title="我是h2">我是h2</h2>
+		<script>
+			var btn = document.querySelector("button");
+			var myH2 = document.querySelector("h2");
+			btn.onclick = function () {
+				console.log(myH2.attributes); // 返回 NamedNodeMap
+				console.log(myH2.attributes[0]); // 返回 id="myh2" 属性节点
+				console.log(myH2.attributes.class); // 返回 class="mybox" 属性节点
+				console.log(myH2.attributes.class.nodeType); // 返回属性节点名
+				console.log(myH2.attributes.class.nodeValue); // 返回性节点值
+
+				// 自定义属性节点(包括W3C属性节点)
+				console.log(myH2.getAttributeNode("class")); // 返回 class="mybox" 属性节点
+				console.log(myH2.getAttribute("class")); // 返回class属性节点的值
+				console.log(myH2.setAttribute("class", "myNewBox")); // 返回class属性节点的值
+
+				// W3C内置的属性节点
+				console.log(myH2.id);
+				console.log(myH2.className);
+				console.log(myH2.title);
+				myH2.title = "newTitle";
+			};
+
+			// 点击切换隐藏
+			var btn1 = document.getElementById("btn1");
+			btn1.onclick = function () {
+				if (myH2.getAttribute("class") === "show") {
+					myH2.setAttribute("class", "hide");
+				} else {
+					myH2.setAttribute("class", "show");
+				}
+			};
+		</script>
+	</body>
+</html>
