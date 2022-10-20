@@ -211,8 +211,72 @@ margin-left: -(0.5 * 盒子宽度的一般)
 
 ### [三角形](https://www.bilibili.com/video/BV14J4114768?p=259&vd_source=6e9c2de5b89c2ba4e13469e295319397)
 
-### 鼠标样式cursor
+```css
+div {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-left-color: pink
+}
+```
 
-### 表单轮廓与文本域防止拖拽
+### [鼠标样式cursor](https://www.bilibili.com/video/BV14J4114768?p=261&vd_source=6e9c2de5b89c2ba4e13469e295319397)
 
-### vertical-align
+| cursor: 值  | 描述 |
+| ----------- | ---- |
+| default     | 默认 |
+| pointer     | 小手 |
+| move        | 移动 |
+| text        | 文本 |
+| not-allowed | 禁止 |
+
+### [取消表单轮廓与文本域防止拖拽](https://www.bilibili.com/video/BV14J4114768?p=262&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+取消表单轮廓
+
+```css
+iput {
+    outline: none;
+}
+```
+
+禁止文本域缩放
+
+```css
+textarea {
+    resize: none;
+}
+```
+
+### [vertical-align实现行内块元素和文字垂直居中](https://www.bilibili.com/video/BV14J4114768?p=263&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+```css
+div {
+    display: inline-block;
+	vertical-align: middle;
+}
+```
+
+### [图片底部留白解决方案](https://www.bilibili.com/video/BV14J4114768?p=264&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+​    vertical-vertical-align: middle|top|bottom;
+
+```css
+img {
+    vertical-vertical-align: middle;
+}
+```
+
+### [单行文字溢出省略号](https://www.bilibili.com/video/BV14J4114768?p=265&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [多行文字溢出省略号](https://www.bilibili.com/video/BV14J4114768?p=266&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [margin负值妙用](https://www.bilibili.com/video/BV14J4114768?p=267&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [文字环绕效果float](https://www.bilibili.com/video/BV14J4114768?p=269&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [行内块元素妙用](https://www.bilibili.com/video/BV14J4114768?p=270&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [三角妙用](https://www.bilibili.com/video/BV14J4114768?p=270&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+
+### [css初始化](https://www.bilibili.com/video/BV14J4114768?p=273&vd_source=6e9c2de5b89c2ba4e13469e295319397)
