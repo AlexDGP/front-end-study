@@ -259,11 +259,11 @@ div {
 
 ### [图片底部留白解决方案](https://www.bilibili.com/video/BV14J4114768?p=264&vd_source=6e9c2de5b89c2ba4e13469e295319397)
 
-​    vertical-vertical-align: middle|top|bottom;
+​    vertical-align: middle|top|bottom;
 
 ```css
 img {
-    vertical-vertical-align: middle;
+    vertical-align: middle;
 }
 ```
 
