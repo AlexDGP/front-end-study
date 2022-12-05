@@ -57,5 +57,73 @@ npm install babel-plugin-component -D
 
 ## 03_插件
 
-webstorm下载安装element可以自动生成 组件代码
+webstorm下载安装element可以自动生成组件代码
 
+## 04_Container布局容器
+
+用于布局的容器组件，方便快速搭建页面的基本结构：
+
+`<el-container>`：外层容器。当子元素中包含 `<el-header>` 或 `<el-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
+
+`<el-header>`：顶栏容器。
+
+`<el-aside>`：侧边栏容器。
+
+`<el-main>`：主要区域容器。
+
+`<el-footer>`：底栏容器。
+
+以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<el-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<el-container>`。
+
+```vue
+<template>
+  <div>
+    <el-container>
+      <el-header>header</el-header>
+      <el-container>
+        <el-aside>aside</el-aside>
+        <el-main>
+          <el-button type="primary">buttonCont</el-button>
+        </el-main>
+      </el-container>
+      <el-footer>footer</el-footer>
+    </el-container>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AboutView",
+};
+</script>
+
+<style>
+.el-header,
+.el-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+</style>
+```
+
+## 05_Layout布局

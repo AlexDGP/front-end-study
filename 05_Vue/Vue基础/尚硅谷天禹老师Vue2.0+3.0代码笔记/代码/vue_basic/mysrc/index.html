@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Vue</title>
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="root">
+			<h1>{{name}}</h1>
+			<button @click="showMsg(123, $event)">click me</button>
+		</div>
+	</body>
+
+	<script>
+		Vue.config.productionTip = false;
+		const vm = new Vue({
+			el: "#root",
+			data: {
+				name: "Hello World",
+			},
+			methods: {
+				showMsg: function (param, event) {
+					console.log(param + event.target);
+				},
+			},
+		});
+	</script>
+</html>
