@@ -127,3 +127,100 @@ body > .el-container {
 ```
 
 ## 05_Layout布局
+
+```vue
+<template>
+  <div>
+    <!--24分栏布局-->
+    <el-row>
+      <el-col :span="24"
+        ><div class="grid-content bg-purple-dark"></div
+      ></el-col>
+    </el-row>
+    <!--el-col中span属性指定分栏大小-->
+    <el-row>
+      <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="12"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+    </el-row>
+    <!--el-row中gutter属性指定分栏间隔-->
+    <el-row :gutter="20">
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+    </el-row>
+    <!--el-col中offset属性指定分栏偏移量-->
+    <el-row>
+      <el-col :span="6" :offset="1"
+        ><div class="grid-content bg-purple"></div
+      ></el-col>
+      <el-col :span="6"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="5"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+    </el-row>
+    <!--el-row中type属性(flex)和justify属性(start,center,end,space-between,space-around)指定元素的排版方式-->
+    <el-row type="flex" justify="space-around">
+      <el-col :span="2"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="2"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+      <el-col :span="2"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="2"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+      <el-col :span="2"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="2"
+        ><div class="grid-content bg-purple-light"></div
+      ></el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MyHome",
+  mounted() {
+    console.info("info", this);
+  },
+};
+</script>
+
+<style scoped>
+.el-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+</style>
+
+
+```
+
