@@ -82,9 +82,7 @@ webstorm下载安装element可以自动生成组件代码
       <el-header>header</el-header>
       <el-container>
         <el-aside>aside</el-aside>
-        <el-main>
-          <el-button type="primary">buttonCont</el-button>
-        </el-main>
+        <el-main>main</el-main>
       </el-container>
       <el-footer>footer</el-footer>
     </el-container>
@@ -93,35 +91,28 @@ webstorm下载安装element可以自动生成组件代码
 
 <script>
 export default {
-  name: "AboutView",
+  name: "MyContainer",
 };
 </script>
 
-<style>
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+<style scoped>
+.el-container {
+  border: solid 1px red;
+}
+.el-header {
+  border: dotted 1px yellow;
 }
 
 .el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
+  border: dotted 1px aquamarine;
 }
 
 .el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
+  border: dotted 1px green;
 }
 
-body > .el-container {
-  margin-bottom: 40px;
+.el-footer {
+  border: dotted 1px gray;
 }
 </style>
 ```
@@ -224,3 +215,4 @@ export default {
 
 ```
 
+## 06_Button按钮
