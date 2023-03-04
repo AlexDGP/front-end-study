@@ -7,14 +7,14 @@ var returnedTarget = Object.assign(target, source);
 console.log(target); // { a: 1, b: 4, c: 5 }
 console.log(returnedTarget); // { a: 1, b: 4, c: 5 }
 
-/* 
+/*
 Syntax
   Object.assign(target, ...sources)
 Parameters
   target
     The target object — what to apply the sources' properties to, which is returned after it is modified.
   sources
-    The source object(s) — objects containing the properties you want to apply. 
+    The source object(s) — objects containing the properties you want to apply.
 Return value
   The target object.
 */

@@ -2,9 +2,13 @@
 
 ## 00_安装与破解
 
-官网地址:https://typoraio.cn/
+![image-20230304103827336](./assets/image-20230304103827336.png)
 
-破解版安装包在`resource`文件夹下,破解请阅读readMe文件
+版本:1.5.8
+
+中文官网地址:https://typoraio.cn/
+
+安装包及破解软件在`resource`文件夹下,破解请阅读readMe文件
 
 ## 01_首选项
 
@@ -18,3 +22,4 @@
 ## 02_主题
 
 DrakeTyporaTheme:https://github.com/liangjingkanji/DrakeTyporaTheme
+

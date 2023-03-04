@@ -1,6 +1,6 @@
 // for
 /* 语法
-for ([initialExpression]; [condition]; [incrementExpression]) 
+for ([initialExpression]; [condition]; [incrementExpression])
 	statement;
 */
 let array = [0, 1, 2, 3];

@@ -14,7 +14,7 @@ for (const [key, value] of Object.entries(object1)) {
 // "a: somestring"
 // "b: 42"
 
-/* 
+/*
 Syntax
   Object.entries(obj)
   Parameters

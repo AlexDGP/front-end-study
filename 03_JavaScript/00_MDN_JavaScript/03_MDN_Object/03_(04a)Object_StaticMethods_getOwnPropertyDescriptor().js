@@ -7,7 +7,7 @@ console.log(descriptor1); // { value: 42, writable: true, enumerable: true, conf
 console.log(descriptor1.configurable); // true
 console.log(descriptor1.value); // 42
 
-/* 
+/*
 Syntax
   Object.getOwnPropertyDescriptor(obj, prop)
   Parameters

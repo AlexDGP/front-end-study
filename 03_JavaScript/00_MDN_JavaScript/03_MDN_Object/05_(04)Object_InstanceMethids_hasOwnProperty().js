@@ -8,7 +8,7 @@ console.log(object1.hasOwnProperty("hasOwnProperty")); // expected output: false
 
 // Note: Object.hasOwn() is recommended over hasOwnProperty(), in browsers where it is supported.
 
-/* 
+/*
 Syntax
   hasOwnProperty(prop)
   Parameters

@@ -19,13 +19,13 @@ var obj1 = Object(obj); // a non-constructor context
 var obj2 = new Object(obj); // new Object()
 console.log(obj1 === obj2); // true
 
-/* 
+/*
 Syntax
   new Object()
   new Object(value)
 Parameters
   value
-    Any value. 
+    Any value.
 */
 
 /* Examples */

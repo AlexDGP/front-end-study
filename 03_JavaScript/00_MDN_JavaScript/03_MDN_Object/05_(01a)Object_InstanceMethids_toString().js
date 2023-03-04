@@ -9,7 +9,7 @@ Dog.prototype.toString = function dogToString() {
 };
 console.log(dog1.toString()); // expected output: "Gabby"
 
-/* 
+/*
 Syntax
   toString()
   Return value

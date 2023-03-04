@@ -9,14 +9,14 @@ Object.defineProperties(object1, {
 	property2: {},
 });
 console.log(object1.property1); // expected output: 42
-/* 
+/*
 Syntax
   Object.defineProperties(obj, props)
   Parameters
     obj
       The object on which to define or modify properties.
     props
-      An object whose keys represent the names of properties to be defined or modified and whose values are objects describing those properties. 
+      An object whose keys represent the names of properties to be defined or modified and whose values are objects describing those properties.
       Each value in props must be either a data descriptor or an accessor descriptor; it cannot be both (see Object.defineProperty() for more details).
   Return value
     The object that was passed to the function.

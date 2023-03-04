@@ -9,7 +9,7 @@ MyNumberType.prototype.valueOf = function () {
 const object1 = new MyNumberType(4);
 console.log(object1 + 3); // expected output: 7
 
-/* 
+/*
 Syntax
   valueOf()
   Return value

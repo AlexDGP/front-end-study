@@ -1,7 +1,7 @@
 /* Object.is() */
 // The Object.is() method determines whether two values are the same value.
 
-/* 
+/*
 Syntax
   Object.is(value1, value2);
   Parameters

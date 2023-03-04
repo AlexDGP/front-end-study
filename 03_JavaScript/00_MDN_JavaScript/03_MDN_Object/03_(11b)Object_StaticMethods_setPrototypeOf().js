@@ -9,7 +9,7 @@
 // Until engine developers address this issue, if you are concerned about performance, you should avoid setting the [[Prototype]] of an object. Instead,
 // create a new object with the desired [[Prototype]] using Object.create().
 
-/* 
+/*
 Syntax
   Object.setPrototypeOf(obj, prototype)
   Parameters

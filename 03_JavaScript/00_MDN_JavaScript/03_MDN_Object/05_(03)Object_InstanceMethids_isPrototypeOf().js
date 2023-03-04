@@ -10,7 +10,7 @@ console.log(Bar.prototype.isPrototypeOf(bar)); // expected output: true
 // Note: isPrototypeOf() differs from the instanceof operator.
 // In the expression "object instanceof AFunction", the object prototype chain is checked against AFunction.prototype, not against AFunction itself.
 
-/* 
+/*
 Syntax
   isPrototypeOf(object)
   Parameters

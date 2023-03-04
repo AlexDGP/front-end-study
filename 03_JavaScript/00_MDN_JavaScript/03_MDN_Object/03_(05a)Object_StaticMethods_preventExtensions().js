@@ -10,7 +10,7 @@ try {
 	console.log(e); // expected output: TypeError: Cannot define property property1, object is not extensible
 }
 
-/* 
+/*
 Syntax
     Object.preventExtensions(obj)
   Parameters

@@ -5,7 +5,7 @@ console.log(date1.toLocaleString("ar-EG")); // expected output: "٢٠‏/١٢‏
 const number1 = 123456.789;
 console.log(number1.toLocaleString("de-DE")); // expected output: "123.456,789"
 
-/* 
+/*
 Syntax
   toLocaleString()
   Return value

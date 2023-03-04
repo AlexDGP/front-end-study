@@ -5,14 +5,14 @@ console.log(Object.isSealed(object1)); // expected output: false
 Object.seal(object1);
 console.log(Object.isSealed(object1)); // expected output: true
 
-/* 
+/*
 Syntax
   Object.isSealed(obj)
   Parameters
     obj
       The object which should be checked.
   Return value
-    A Boolean indicating whether or not the given object is sealed. 
+    A Boolean indicating whether or not the given object is sealed.
 */
 
 /* Description */

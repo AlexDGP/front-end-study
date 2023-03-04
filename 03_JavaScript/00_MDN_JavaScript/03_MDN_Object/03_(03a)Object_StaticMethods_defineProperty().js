@@ -8,7 +8,7 @@ Object.defineProperty(object1, "property1", {
 object1.property1 = 77; // throws an error in strict mode
 console.log(object1.property1); // expected output: 42
 
-/* 
+/*
 Syntax
   Object.defineProperty(obj, prop, descriptor)
   Parameters

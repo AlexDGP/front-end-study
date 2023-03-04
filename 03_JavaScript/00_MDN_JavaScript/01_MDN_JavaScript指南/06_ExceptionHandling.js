@@ -5,7 +5,7 @@
 // throw true;       // Boolean type
 // throw {toString: function() { return "I'm an object!"; } };
 
-/* 
+/*
 // Create an object type UserException
 function UserException(message) {
 	this.message = message;
@@ -18,7 +18,7 @@ UserException.prototype.toString = function () {
 };
 // Create an instance of the object type and throw it
 throw new UserException("Value too high");
-console.log("不执行"); // 不会被执行 
+console.log("不执行"); // 不会被执行
 */
 
 // 02_try...[catch...][finally...]
@@ -71,7 +71,7 @@ try {
 	doSomethingErrorProne();
 } catch (e) {
 	console.log(e);
-	/* 	
+	/*
 	Error: The message
 			at doSomethingErrorProne (c:\Users\AlexHome\Desktop\StudyProjects\03_javascript\MDN_JavaScript\JavaScript指南\06_ExceptionHandling.js:65:9)
 			at Object.<anonymous> (c:\Users\AlexHome\Desktop\StudyProjects\03_javascript\MDN_JavaScript\JavaScript指南\06_ExceptionHandling.js:71:2)
@@ -80,7 +80,7 @@ try {
 			at Module.load (node:internal/modules/cjs/loader:981:32)
 			at Function.Module._load (node:internal/modules/cjs/loader:822:12)
 			at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
-			at node:internal/main/run_main_module:17:47 
+			at node:internal/main/run_main_module:17:47
 		*/
 	console.log(e.name); // Error
 	console.log(e.message); // message

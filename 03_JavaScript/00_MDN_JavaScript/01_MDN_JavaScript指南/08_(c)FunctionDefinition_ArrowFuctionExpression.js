@@ -108,7 +108,7 @@ obj.b(); // undefined, {}
 obj.c(); // 10, { i: 10, b: [Function: b], c: [Function: c] }
 
 // 箭头函数不能用作构造器，和 new一起用会抛出错误。
-/* 
+/*
 var Foo = () => {};
 var foo = new Foo(); // TypeError: Foo is not a constructor
  */

@@ -10,7 +10,7 @@ var me = Object.create(person);
 me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
 me.isHuman = true; // inherited properties can be overwritten
 me.printIntroduction(); // expected output: "My name is Matthew. Am I human? true"
-/* 
+/*
 Syntax
   Object.create(proto)
   Object.create(proto, propertiesObject)
@@ -18,9 +18,9 @@ Syntax
     proto
       The object which should be the prototype of the newly-created object.
     propertiesObject Optional
-      If specified and not undefined, an object whose enumerable own properties 
-      (that is, those properties defined upon itself and not enumerable properties along its prototype chain) 
-      specify property descriptors to be added to the newly-created object, with the corresponding property names. 
+      If specified and not undefined, an object whose enumerable own properties
+      (that is, those properties defined upon itself and not enumerable properties along its prototype chain)
+      specify property descriptors to be added to the newly-created object, with the corresponding property names.
       These properties correspond to the second argument of Object.defineProperties().
   Return value
     A new object with the specified prototype object and properties.

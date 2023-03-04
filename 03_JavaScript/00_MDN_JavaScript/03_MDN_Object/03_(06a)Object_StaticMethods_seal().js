@@ -8,7 +8,7 @@ console.log(object1.property1); // 33
 delete object1.property1; // cannot delete when sealed
 console.log(object1.property1); // 33
 
-/* 
+/*
 Syntax
   Object.seal(obj)
   Parameters

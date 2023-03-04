@@ -8,7 +8,7 @@ object1[b] = "globalSymbol";
 var objectSymbols = Object.getOwnPropertySymbols(object1);
 console.log(objectSymbols); // [Symbol(a), Symbol(b)];
 
-/* 
+/*
 Syntax
   Object.getOwnPropertySymbols(obj)
   Parameters

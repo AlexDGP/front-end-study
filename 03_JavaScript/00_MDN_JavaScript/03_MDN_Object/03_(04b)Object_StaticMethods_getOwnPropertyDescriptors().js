@@ -4,7 +4,7 @@ const object1 = { property1: 42, property2: "str" };
 const descriptors1 = Object.getOwnPropertyDescriptors(object1);
 console.log(descriptors1); // { property1: { value: 42, writable: true, enumerable: true, configurable: true }, property2: { value: 'str', writable: true, enumerable: true, configurable: true } }
 
-/* 
+/*
 Syntax
   Object.getOwnPropertyDescriptors(obj)
   Parameters

@@ -6,7 +6,7 @@ var entries = new Map([
 ]);
 var obj = Object.fromEntries(entries);
 console.log(obj); // expected output: Object { foo: "bar", baz: 42 }
-/* 
+/*
 Syntax
   Object.fromEntries(iterable);
   Parameters

@@ -4,7 +4,7 @@
 	statement_1;
 } else {
 	statement_2;
-} 
+}
 */
 function judgePositiveNumber(x) {
 	if (x > 0) {
