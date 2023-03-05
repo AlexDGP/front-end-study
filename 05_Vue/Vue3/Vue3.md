@@ -50,7 +50,7 @@
    - 移除keyCode支持作为 v-on 的修饰符
    - ......
 
-## 01_创建Vue3.0工程(√)
+## 01_创建Vue3.0工程
 
 ### 1.使用 vue-cli 创建
 
@@ -305,7 +305,7 @@ npm run dev
   })
   ```
 
-## 8.生命周期
+### 8.生命周期
 <div style="display: flex; align-content: space-around; width: 100%;">
   <div>
     <img src="assets/lifecycle.png" alt="Vue2生命周期" style="zoom: 30%" />
@@ -332,7 +332,7 @@ npm run dev
   - `beforeUnmount` ==>`onBeforeUnmount`
   - `unmounted` =====>`onUnmounted`
 
-## 9.自定义hook函数
+### 9.自定义hook函数
 
 - 什么是hook？—— 本质是一个函数，把setup函数中使用的Composition API进行了封装。
 
@@ -340,9 +340,7 @@ npm run dev
 
 - 自定义hook的优势: 复用代码, 让setup中的逻辑更清楚易懂。
 
-
-
-## 10.toRef
+### 10.toRef函数与toRefs函数
 
 - 作用：创建一个 ref 对象，其value值指向另一个对象中的某个属性。
 - 语法：```const name = toRef(person,'name')```
@@ -354,7 +352,7 @@ npm run dev
 
 ## 03_其它 Composition API
 
-## 1.shallowReactive 与 shallowRef
+### 1.shallowReactive 与 shallowRef
 
 - shallowReactive：只处理对象最外层属性的响应式（浅响应式）。
 - shallowRef：只处理基本数据类型的响应式, 不进行对象的响应式处理。
@@ -363,13 +361,13 @@ npm run dev
   -  如果有一个对象数据，结构比较深, 但变化时只是外层属性变化 ===> shallowReactive。
   -  如果有一个对象数据，后续功能不会修改该对象中的属性，而是生新的对象来替换 ===> shallowRef。
 
-## 2.readonly 与 shallowReadonly
+### 2.readonly 与 shallowReadonly
 
 - readonly: 让一个响应式数据变为只读的（深只读）。
 - shallowReadonly：让一个响应式数据变为只读的（浅只读）。
 - 应用场景: 不希望数据被修改时。
 
-## 3.toRaw 与 markRaw
+### 3.toRaw 与 markRaw
 
 - toRaw：
   - 作用：将一个由```reactive```生成的<strong style="color:orange">响应式对象</strong>转为<strong style="color:orange">普通对象</strong>。
@@ -380,7 +378,7 @@ npm run dev
     1. 有些值不应被设置为响应式的，例如复杂的第三方类库等。
     2. 当渲染具有不可变数据源的大列表时，跳过响应式转换可以提高性能。
 
-## 4.customRef
+### 4.customRef
 
 - 作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。
 
@@ -429,7 +427,7 @@ npm run dev
 
   
 
-## 5.provide 与 inject
+### 5.provide 与 inject
 
 <img src="https://v3.cn.vuejs.org/images/components_provide.png" style="width:300px" />
 
@@ -461,7 +459,7 @@ npm run dev
      }
      ```
 
-## 6.响应式数据的判断
+### 6.响应式数据的判断
 
 - isRef: 检查一个值是否为一个 ref 对象
 - isReactive: 检查一个对象是否是由 `reactive` 创建的响应式代理
@@ -470,7 +468,7 @@ npm run dev
 
 ## 04_Composition API 的优势
 
-## 1.Options API 存在的问题
+### 1.Options API 存在的问题
 
 使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改 。
 
@@ -495,7 +493,16 @@ npm run dev
 
 
 
-## 2.Composition API 的优势
+
+
+
+
+
+
+
+
+
+### 2.Composition API 的优势
 
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
 
@@ -527,15 +534,15 @@ npm run dev
 
 
 
-05_新的组件
+## 05_新的组件
 
-## 1.Fragment
+### 1.Fragment
 
 - 在Vue2中: 组件必须有一个根标签
 - 在Vue3中: 组件可以没有根标签, 内部会将多个标签包含在一个Fragment虚拟元素中
 - 好处: 减少标签层级, 减小内存占用
 
-## 2.Teleport
+### 2.Teleport
 
 - 什么是Teleport？—— `Teleport` 是一种能够将我们的<strong style="color:#DD5145">组件html结构</strong>移动到指定位置的技术。
 
@@ -550,7 +557,7 @@ npm run dev
   </teleport>
   ```
 
-## 3.Suspense
+### 3.Suspense
 
 - 等待异步组件时渲染一些额外内容，让应用有更好的用户体验
 
@@ -581,9 +588,7 @@ npm run dev
     </template>
     ```
 
-# 六、其他
-
-- [ ] ## 1.全局API的转移
+#### 1.全局API的转移
 
 
 - Vue 2.x 有许多全局 API 和配置。
@@ -619,7 +624,7 @@ npm run dev
     | Vue.prototype             | app.config.globalProperties                 |
   
 
-## 2.其他改变
+#### 2.其他改变
 
 - data选项应始终被声明为一个函数。
 
