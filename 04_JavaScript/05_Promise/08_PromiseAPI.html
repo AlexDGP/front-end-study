@@ -1,133 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>7-PromiseAPI</title>
-	</head>
-	<body>
-		<script>
-			// 01_Promise构造函数
-			var flag = false;
-			var executor = function (resolve, reject) {
-				if (flag) {
-					resolve("resolved");
-				} else {
-					reject("rejected");
-				}
-				console.log("同步调用1");
-			};
-			const p1 = new Promise(executor);
-			console.log("同步调用2");
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7-PromiseAPI</title>
+  </head>
+  <body>
+    <script>
+      // 01_Promise构造函数
+      var flag = false;
+      var executor = function (resolve, reject) {
+        if (flag) {
+          resolve("resolved");
+        } else {
+          reject("rejected");
+        }
+        console.log("同步调用1");
+      };
+      const p1 = new Promise(executor);
+      console.log("同步调用2");
 
-			// 02_Promise.prototype.then方法 (onResolved, onRejected)=>{}
-			var onResolved = (value) => {
-				console.log(value);
-			};
-			var onRejected = (reason) => {
-				console.log(reason);
-			};
-			p1.then(onResolved, onRejected);
+      // 02_Promise.prototype.then方法 (onResolved, onRejected)=>{}
+      var onResolved = (value) => {
+        console.log(value);
+      };
+      var onRejected = (reason) => {
+        console.log(reason);
+      };
+      p1.then(onResolved, onRejected);
 
-			// 03_Promise.prototype.catch方法
-			// catch方法调用reject()
-			p1.catch((reason) => {
-				console.log(reason + " catch");
-			});
+      // 03_Promise.prototype.catch方法
+      // catch方法调用reject()
+      p1.catch((reason) => {
+        console.log(reason + " catch");
+      });
 
-			// 04_Promise.resolve方法
-			// 如果传入的参数为非Promise类型的对象,则返回结果为成功的Promise对象
-			var p20 = Promise.resolve("HelloPromise");
-			console.log(p20); // Promise {<fulfilled>: 'HelloPromise'}
-			// 如果传入的参数为Promise类型的对象,则返回结果由所传入的参数Promise的结果所决定
-			var p21 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("resolved");
-				})
-			);
-			console.log(p21); // Promise {<fulfilled>: 'resolved'}
-			var p22 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					reject("rejected");
-				})
-			);
-			console.log(p22); // Promise {<rejected>: 'rejected'}
+      // 04_Promise.resolve方法
+      // 如果传入的参数为非Promise类型的对象,则返回结果为成功的Promise对象
+      var p20 = Promise.resolve("HelloPromise");
+      console.log(p20); // Promise {<fulfilled>: 'HelloPromise'}
+      // 如果传入的参数为Promise类型的对象,则返回结果由所传入的参数Promise的结果所决定
+      var p21 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("resolved");
+        })
+      );
+      console.log(p21); // Promise {<fulfilled>: 'resolved'}
+      var p22 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          reject("rejected");
+        })
+      );
+      console.log(p22); // Promise {<rejected>: 'rejected'}
 
-			//05_Promise.reject方法
-			// 如果传入的参数为非Promise类型的对象,则返回结果为失败的Promise对象
-			var p30 = Promise.reject("HelloPromise");
-			console.log(p30); // Promise {<rejected>: 'HelloPromise'}
-			// 如果传入的参数为Promise类型的对象,则返回结果为失败的Promise对象,其[[PromiseResult]]为所传入的参数Promise对象
-			var p31 = Promise.reject(
-				new Promise((resolve, reject) => {
-					resolve("resolved");
-				})
-			);
-			console.log(p31); // {<rejected>: Promise}
-			var p32 = Promise.reject(
-				new Promise((resolve, reject) => {
-					reject("rejected");
-				})
-			);
-			console.log(p32); // {<rejected>: Promise}
+      //05_Promise.reject方法
+      // 如果传入的参数为非Promise类型的对象,则返回结果为失败的Promise对象
+      var p30 = Promise.reject("HelloPromise");
+      console.log(p30); // Promise {<rejected>: 'HelloPromise'}
+      // 如果传入的参数为Promise类型的对象,则返回结果为失败的Promise对象,其[[PromiseResult]]为所传入的参数Promise对象
+      var p31 = Promise.reject(
+        new Promise((resolve, reject) => {
+          resolve("resolved");
+        })
+      );
+      console.log(p31); // {<rejected>: Promise}
+      var p32 = Promise.reject(
+        new Promise((resolve, reject) => {
+          reject("rejected");
+        })
+      );
+      console.log(p32); // {<rejected>: Promise}
 
-			// Promise.all([Promise数组])方法
-			// Promise数组中所有都成功,返回结果为成功的Promise
-			var p41 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("p41");
-				})
-			);
-			var p42 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("p42");
-				})
-			);
-			var p43 = Promise.resolve("p43");
-			var result41 = Promise.all([p41, p42, p43]);
-			console.log(result41); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: Array(3):0: "p41" 1: "p42" 2: "p43"
-			// 否则返回第一个失败的Promise
-			var p44 = Promise.reject(
-				new Promise((resolve, reject) => {
-					resolve("p44");
-				})
-			);
-			var p45 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("p45");
-				})
-			);
-			var p46 = Promise.reject("p46");
-			var result42 = Promise.all([p44, p45, p46]); // [[PromiseState]]: "rejected", [[PromiseResult]]: {Promise : [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p44"}
-			console.log(result42);
+      // Promise.all([Promise数组])方法
+      // Promise数组中所有都成功,返回结果为成功的Promise
+      var p41 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("p41");
+        })
+      );
+      var p42 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("p42");
+        })
+      );
+      var p43 = Promise.resolve("p43");
+      var result41 = Promise.all([p41, p42, p43]);
+      console.log(result41); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: Array(3):0: "p41" 1: "p42" 2: "p43"
+      // 否则返回第一个失败的Promise
+      var p44 = Promise.reject(
+        new Promise((resolve, reject) => {
+          resolve("p44");
+        })
+      );
+      var p45 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("p45");
+        })
+      );
+      var p46 = Promise.reject("p46");
+      var result42 = Promise.all([p44, p45, p46]); // [[PromiseState]]: "rejected", [[PromiseResult]]: {Promise : [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p44"}
+      console.log(result42);
 
-			// Promise.race()方法
-			// 返回第一个改变状态的Promise
-			var p51 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("p51");
-				})
-			);
-			var p52 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					resolve("p52");
-				})
-			);
-			var p53 = Promise.resolve("p53");
+      // Promise.race()方法
+      // 返回第一个改变状态的Promise
+      var p51 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("p51");
+        })
+      );
+      var p52 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          resolve("p52");
+        })
+      );
+      var p53 = Promise.resolve("p53");
 
-			var p54 = Promise.resolve(
-				new Promise((resolve, reject) => {
-					setTimeout(function () {
-						resolve("p51");
-					}, 1000);
-				})
-			);
-			var result51 = Promise.race([p51, p52, p53]);
-			console.log(result51); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p51"
+      var p54 = Promise.resolve(
+        new Promise((resolve, reject) => {
+          setTimeout(function () {
+            resolve("p51");
+          }, 1000);
+        })
+      );
+      var result51 = Promise.race([p51, p52, p53]);
+      console.log(result51); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p51"
 
-			var result52 = Promise.race([p52, p53, p54]);
-			console.log(result52); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p52"
-		</script>
-	</body>
+      var result52 = Promise.race([p52, p53, p54]);
+      console.log(result52); // [[PromiseState]]: "fulfilled", [[PromiseResult]]: "p52"
+    </script>
+  </body>
 </html>

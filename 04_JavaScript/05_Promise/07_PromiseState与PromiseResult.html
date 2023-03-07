@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>07_PromiseState与PromiseResult</title>
-	</head>
-	<body>
-		<script>
-			// Promise一共有三种状态：
-			// 未决定的：pending
-			// 成功：resolved/fulfilled
-			// 失败：rejected
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07_PromiseState与PromiseResult</title>
+  </head>
+  <body>
+    <script>
+      // Promise一共有三种状态：
+      // 未决定的：pending
+      // 成功：resolved/fulfilled
+      // 失败：rejected
 
-			// Promise一共有两种状态变化,只能改变一次：
-			// （1）从pending变成resolved/fulfilled
-			// （2）从pending变成reject
+      // Promise一共有两种状态变化,只能改变一次：
+      // （1）从pending变成resolved/fulfilled
+      // （2）从pending变成reject
 
-			// Promise有一个属性对应其状态：[[PromiseState]]
-			// Promise有一个属性[[PromiseResult]],[[PromiseResult]]只能由resolve()/reject()方法修改
+      // Promise有一个属性对应其状态：[[PromiseState]]
+      // Promise有一个属性[[PromiseResult]],[[PromiseResult]]只能由resolve()/reject()方法修改
 
-			const p0 = new Promise((resolve, reject) => {});
-			console.log(p0); // [[PromiseState]]: "pending", [[PromiseResult]]: undefined
+      const p0 = new Promise((resolve, reject) => {});
+      console.log(p0); // [[PromiseState]]: "pending", [[PromiseResult]]: undefined
 
-			var num = 0;
-			// var num = 1;
-			const p = new Promise((resolve, reject) => {
-				if (num === 1) {
-					resolve(num);
-				} else {
-					reject(num);
-				}
-			});
-			p.then(
-				(value) => {
-					console.log(p); // var num = 1; [[PromiseState]]: "fulfilled", [[PromiseResult]]: 1
-				},
-				(reason) => {
-					console.log(p); // var num = 0; [[PromiseState]]: "rejected", [[PromiseResult]]: 0
-				}
-			);
-		</script>
-	</body>
+      var num = 0;
+      // var num = 1;
+      const p = new Promise((resolve, reject) => {
+        if (num === 1) {
+          resolve(num);
+        } else {
+          reject(num);
+        }
+      });
+      p.then(
+        (value) => {
+          console.log(p); // var num = 1; [[PromiseState]]: "fulfilled", [[PromiseResult]]: 1
+        },
+        (reason) => {
+          console.log(p); // var num = 0; [[PromiseState]]: "rejected", [[PromiseResult]]: 0
+        }
+      );
+    </script>
+  </body>
 </html>

@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>03_Promise实践练习_发送AJAX请求</title>
-	</head>
-	<body>
-		<div class="container">
-			<h2 class="page-header">03_Promise实践练习_发送AJAX请求</h2>
-			<button class="btn btn-primary" id="btn">点击发送AJAX请求</button>
-		</div>
-		<script>
-			const btn = document.querySelector("#btn");
-			btn.addEventListener("click", () => {
-				// 发送AJAX请求
-				// const xhr = new XMLHttpRequest();
-				// xhr.open("GET", "https://api.apiopen.top/getJoke");
-				// xhr.send();
-				// xhr.onreadystatechange = () => {
-				// 	if (xhr.readyState === 4) {
-				// 		if (xhr.status >= 200 && xhr.status < 300) {
-				// 			console.log(xhr.response);
-				// 		} else {
-				// 			console.log(xhr.status);
-				// 		}
-				// 	}
-				// };
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_Promise实践练习_发送AJAX请求</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="page-header">03_Promise实践练习_发送AJAX请求</h2>
+      <button class="btn btn-primary" id="btn1">点击发送AJAX请求,不使用Promise</button>
+      <button class="btn btn-primary" id="btn2">点击发送AJAX请求,用Promise封装</button>
+    </div>
+    <script>
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
 
-				// 用Promise封装
-				const p = new Promise((resolve, reject) => {
-					const xhr = new XMLHttpRequest();
-					xhr.open("GET", "https://api.apiopen.top/getJoke");
-					xhr.send();
-					xhr.onreadystatechange = () => {
-						if (xhr.readyState === 4) {
-							if (xhr.status >= 200 && xhr.status < 300) {
-								resolve(xhr.response);
-							} else {
-								reject(xhr.status);
-							}
-						}
-					};
-				});
-				p.then(
-					(value) => {
-						console.log(value);
-					},
-					(reason) => {
-						console.log(reason);
-					}
-				);
-			});
-		</script>
-	</body>
+      // 不使用Promise
+      btn1.addEventListener("click", () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.apiopen.top/getJoke");
+        xhr.send();
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              console.log(xhr.response);
+            } else {
+              console.log(xhr.status);
+            }
+          }
+        };
+      });
+
+      // 用Promise封装
+      btn2.addEventListener("click", () => {
+        const p = new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "https://api.apiopen.top/getJoke");
+          xhr.send();
+          xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+              if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.response);
+              } else {
+                reject(xhr.status);
+              }
+            }
+          };
+        });
+        p.then(
+          (value) => {
+            console.log(value);
+          },
+          (reason) => {
+            console.log(reason);
+          }
+        );
+      });
+    </script>
+  </body>
 </html>
