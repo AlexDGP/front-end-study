@@ -8,7 +8,7 @@
 
 视频作者:尚硅谷-李强
 
-## 01_AJAX基础知识
+## 01_AJAX介绍
 
 ### 01_AJAX简介
 
@@ -141,11 +141,11 @@ POST方法一般有请求体
 
 ![image-20230308104818645](./assets/image-20230308104818645.png)
 
-![image-20230308104922841](./assets/image-20230308104922841.png)
+![image-20230308200453627](./assets/image-20230308200453627.png)
 
 ![image-20230308105359720](./assets/image-20230308105359720.png)
 
-## 03_AJAX知识
+## 03_AJAX实操
 
 ### 00_Express服务端
 
@@ -199,6 +199,33 @@ app.listen(port, () => {
 
 ### 01_客户端发送GET请求
 
+- server
+
+```js
+// 引入express
+const express = require("express");
+
+// 创建express对象
+const app = express();
+
+// 创建路由规则
+// request是请求报文的封装
+// response是响应报文的封装
+app.get("/server", (request, response) => {
+  // 设置响应头
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+  response.send("Hello AJAX"); // 设置响应体
+});
+
+// 监听8000端口启动服务
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
+```
+
+- client
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -224,7 +251,7 @@ app.listen(port, () => {
     <script>
       const btn = document.getElementById("btn");
       const result = document.getElementById("result");
-      window.addEventListener("click", () => {
+      btn.addEventListener("click", () => {
         // 创建xhr对象
         const xhr = new XMLHttpRequest();
         // 设置请求方法和url
@@ -254,15 +281,44 @@ app.listen(port, () => {
     </script>
   </body>
 </html>
+
 ```
 
-运行结果
+- result
 
 ![image-20230308160420406](./assets/image-20230308160420406.png)
 
 ![image-20230308160803523](./assets/image-20230308160803523.png)
 
 ### 02_客户端发送POST请求
+
+- server
+
+```js
+// 引入express
+const express = require("express");
+
+// 创建express对象
+const app = express();
+
+// 创建路由规则
+// request是请求报文的封装
+// response是响应报文的封装
+// post
+app.post("/server", (request, response) => {
+  // 设置响应头
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+  response.send("Hello AJAX POST"); // 设置响应体
+});
+
+// 监听8000端口启动服务
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
+```
+
+- client
 
 ```html
 <!DOCTYPE html>
@@ -289,7 +345,7 @@ app.listen(port, () => {
     <script>
       const btn = document.getElementById("btn");
       const result = document.getElementById("result");
-      window.addEventListener("click", () => {
+      btn.addEventListener("click", () => {
         // 创建xhr对象
         const xhr = new XMLHttpRequest();
         // 设置请求方法和url
@@ -321,7 +377,7 @@ app.listen(port, () => {
 </html>
 ```
 
-运行结果
+- result
 
 ![image-20230308162214535](./assets/image-20230308162214535.png)
 
@@ -337,7 +393,30 @@ xhr.setRequestHeader(
 );
 ```
 
-### 03_服务器处理JSON数据
+### 03_服务端处理JSON数据
+
+- server
+
+```js
+const express = require("express");
+
+const app = express();
+
+app.all("/json-server", (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+
+  const data = { name: "Alex" };
+  let str = JSON.stringify(data);
+  response.send(str); // 设置响应体
+});
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
+```
+
+- client
 
 ```html
 <!DOCTYPE html>
@@ -364,35 +443,107 @@ xhr.setRequestHeader(
     <script>
       const btn = document.getElementById("btn");
       const result = document.getElementById("result");
-      window.addEventListener("click", () => {
-        // 创建xhr对象
+      btn.addEventListener("click", () => {
         const xhr = new XMLHttpRequest();
-        // 设置请求方法和url
         xhr.open("POST", "http://127.0.0.1:8000/json-server");
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.send("a=100&b=200&c=300"); // 设置请求体
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status <= 300) {
+              result.innerHTML = xhr.response;
+              result.innerHTML = JSON.parse(xhr.response).name;
+            }
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
 
-        // 设置请求头
+```
+
+- result
+
+![image-20230308164405997](./assets/image-20230308164405997.png)
+
+### 04_客户端请求超时与异常处理
+
+- server
+
+```js
+const express = require("express");
+
+const app = express();
+
+app.all("/json-server", (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+
+  const data = { name: "Alex" };
+  let str = JSON.stringify(data);
+  setTimeout(() => {
+    response.send(str);
+  }, 3000); // 设置3秒后返回结果
+});
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
+```
+
+- client端
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #result {
+        width: 200px;
+        height: 200px;
+        border: 1px red solid;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">发送POST请求</button>
+    <div id="result"></div>
+    <script>
+      const btn = document.getElementById("btn");
+      const result = document.getElementById("result");
+      btn.addEventListener("click", () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:8000/json-server");
         xhr.setRequestHeader(
           "Content-Type",
           "application/x-www-form-urlencoded"
         );
 
-        // 发送请求
+        xhr.timeout = 2000; // 2秒后没收到结果,取消请求
+
+        xhr.ontimeout = () => {
+          alert("请求超时");
+        };
+
+        xhr.onerror = () => {
+          alert("网络异常");
+        };
+
         xhr.send("a=100&b=200&c=300"); // 设置请求体
-        // 事件绑定 处理服务端返回的结果
         xhr.onreadystatechange = () => {
-          // readystate的状态码有:
-          // 0: 未初始化
-          // 1: open方法调用完毕
-          // 2: send方法调用完毕
-          // 3: 服务端返回部分结果
-          // 4: 服务端返回所有结果完毕
           if (xhr.readyState === 4) {
-            // status 状态码有 200(OK) 404 403 401 500等,其中200到300都是成功
             if (xhr.status >= 200 && xhr.status <= 300) {
-              console.log(xhr.status); // 状态码
-              console.log(xhr.statusText); // 状态字符串
-              console.log(xhr.getAllResponseHeaders()); // 所有响应头
-              console.log(xhr.response); // 响应体
               result.innerHTML = xhr.response;
               result.innerHTML = JSON.parse(xhr.response).name;
             }
@@ -404,46 +555,36 @@ xhr.setRequestHeader(
 </html>
 ```
 
-运行结果
+- result
 
-![image-20230308164405997](./assets/image-20230308164405997.png)
+![image-20230308205241562](./assets/image-20230308205241562.png)
 
-### 04_客户端请求超时与异常处理
+### 05_防止重复请求
 
-- 服务端
-
-```js
-setTimeout(() => {
-  // 设置响应体
-  response.send(str);
-}, 3000); // 设置3秒后返回结果
-```
-
-- 客户端
+- server
 
 ```js
-xhr.timeout = 2000; // 2秒后没收到结果,取消请求
+const express = require("express");
 
-xhr.ontimeout = () => {
-  alert("请求超时");
-};
+const app = express();
 
-xhr.onerror = () => {
-  alert("网络异常");
-};
+app.all("/json-server", (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+
+  const data = { name: "Alex" };
+  let str = JSON.stringify(data);
+  setTimeout(() => {
+    response.send(str);
+  }, 3000); // 设置3秒后返回结果
+});
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
 ```
 
-### 05_手动取消请求
-
-- 客户端
-
-```js
-xhr.abort()
-```
-
-### 06_防止重复请求
-
-- 客户端
+- client
 
 ```js
 let xhr = new XMLHttpRequest();
@@ -483,32 +624,80 @@ window.addEventListener("click", () => {
 });
 ```
 
+- result
+
+![image-20230308205817295](./assets/image-20230308205817295.png)
+
 ### 06_JQuery发送AJAX请求(略)
 
 ### 07_Axios发送AJAX请求(略)
 
 ### 08_fetch函数发送AJAX请求
 
+- server
+
 ```js
-window.addEventListener("click", () => {
-  fetch("http://127.0.0.1:8000/json-server", {
-    method: "POST",
-    // headers: {
-    //   name: "Alex",
-    // },
-    body: {
-      username: "AlexDGP",
-      password: "12345678",
-    },
-  })
-    .then((response) => {
-      return response.text();
-    })
-    .then((response) => {
-      console.log(response);
-    });
+const express = require("express");
+const app = express();
+
+app.all("/json-server", (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域
+
+  const data = { name: "Alex" };
+  let str = JSON.stringify(data);
+  response.send(str);
+});
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
 });
 ```
+
+- client
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">发送POST请求</button>
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        fetch("http://127.0.0.1:8000/json-server", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: {
+            username: "AlexDGP",
+            password: "12345678",
+          },
+        })
+          .then((response) => {
+            return response.text();
+          })
+          .then((response) => {
+            console.log(response);
+          });
+      });
+    </script>
+  </body>
+</html>
+```
+
+- result
+
+![image-20230308210625294](./assets/image-20230308210625294.png)
 
 ### 09_同源策略
 
@@ -520,9 +709,12 @@ AJAX默认支持同源策略
 
 违背同源策略就是跨域
 
-- 服务器
+- server
 
 ```js
+const express = require("express");
+const app = express();
+
 app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
@@ -530,9 +722,14 @@ app.get("/home", (req, res) => {
 app.get("/data", (req, res) => {
   res.send("用户数据");
 });
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
 ```
 
-- 客户端(访问127.0.0.1:8000/home)
+- index.html()
 
 ```html
 <!DOCTYPE html>
@@ -564,9 +761,13 @@ app.get("/data", (req, res) => {
 </html>
 ```
 
-### 10_跨域
+- result(客户端访问127.0.0.1:8000/home)
 
-#### jsonp(略,自己看视频)
+![image-20230308211157972](./assets/image-20230308211157972.png)
+
+### 10_跨域jsonp
+
+#### 原生JS实现jsonp
 
 jsonp只支持GET请求
 
@@ -574,13 +775,90 @@ jsonp只支持GET请求
 
 jsonp就是通过`script`标签实现跨域的
 
-#### CORS
+- server
+
+```js
+const express = require("express");
+const app = express();
+
+app.all("/check-username", (req, res) => {
+  const data = {
+    exist: 1,
+    msg: "用户名已存在",
+  };
+  let str = JSON.stringify(data);
+  res.end(`handle(${str})`);
+});
+
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
+```
+
+- client
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    用户名: <input type="text" id="username" />
+    <p></p>
+    <script>
+      let input = document.getElementById("username");
+
+      function handle(data) {
+        input.style.border = "1px solid #f00";
+        document.querySelector("p").innerHTML = data.msg;
+      }
+
+      input.onblur = function () {
+        let username = this.value;
+        const script = document.createElement("script");
+        script.src = "http://127.0.0.1:8000/check-username";
+        document.body.append(script);
+      };
+    </script>
+  </body>
+</html>
+```
+
+- result
+
+![image-20230308213448087](./assets/image-20230308213448087.png)
+
+#### JQuery实现jsonp(略)
+
+### 11_跨域CORS
 
 CORS全称(Cross-Origin Resource Sharing),跨域资源共享
 
+- server
+
 ```js
-response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域请求域名
-response.setHeader("Access-Control-Allow-Method", "*"); // 允许跨域请求方法
-response.setHeader("Access-Control-Allow-Headers", "*"); // 允许跨域头信息
+const express = require("express");
+const app = express();
+app.get("/server", (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*"); // 允许跨域请求域名
+  response.setHeader("Access-Control-Allow-Method", "*"); // 允许跨域请求方法
+  response.setHeader("Access-Control-Allow-Headers", "*"); // 允许跨域头信息
+
+  response.send("Hello CORS"); // 设置响应体
+});
+
+// 监听8000端口启动服务
+const port = 8000;
+app.listen(port, () => {
+  console.log(`服务已启动,${port}端口正在监听中...`);
+});
 ```
 
