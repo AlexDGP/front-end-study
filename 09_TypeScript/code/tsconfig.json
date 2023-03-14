@@ -1,0 +1,28 @@
+{
+  // 需要被编译的文件
+  "include": [
+    "./src/**/*" // **代表任意文件夹,*代表任意文件
+  ],
+  // 不需要被编译的文件
+  "exclude": ["node_modules"],
+  // 编译器选项
+  "compilerOptions": {
+    "module": "commonjs", // 指定模块化的规范
+    "target": "es5", // 指定被编译成的版本
+    "sourceMap": true,
+//    "lib": ["dom"] // 用来指定库,一般情况不需要改,比如在node里运行的没有dom的环境,就不需要包括dom
+    "outDir": "./dist", // 用来指定编译后的文件目录
+//    "outFile": "./dist/app.js" // 把代码合并到一个文件中(不常用)
+//    "allowJs": false, // 是否需要编译JS文件
+//    "checkJs": false, // 是否检查JS代码的语法错误
+//    "removeComments": false, // 是否编译注释
+//    "noEmit": false, // 是否 不生成编译后的文件
+//    "noEmitOnError": false, // 是否 错误时编译
+
+//    "strict": false // 所有严格检查的总开关,开发建议为true
+//    "alwaysStrict": false, // 编译后的代码是否使用严格模式
+//    "noImplicitAny": false, // 是否允许隐式any
+//    "noImplicitThis": false, // 是否允许不明确的this
+//    "strictNullChecks": false, // 是否严格检查null
+  }
+}
