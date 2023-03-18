@@ -142,9 +142,9 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### [声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference#声明)
 
-- [ ] [`var`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
-- [ ] [`let`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
-- [ ] [`const`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
+- [x] [`var`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
+- [x] [`let`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
+- [x] [`const`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
 
 ### [函数和类](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference#函数和类)
 
