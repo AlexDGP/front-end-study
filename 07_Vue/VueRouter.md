@@ -12,7 +12,7 @@ VueRouter v4.x for Vue3
 
 ### 安装
 
-```
+```bash
 npm install vue-router
 ```
 

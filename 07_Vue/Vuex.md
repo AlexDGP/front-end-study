@@ -2,18 +2,18 @@
 
 ## 00_教程简介
 
-视频教程:[Vuex从入门到实战](https://www.bilibili.com/video/BV1h7411N7bg?p=1&vd_source=6e9c2de5b89c2ba4e13469e295319397)
+视频教程:Vuex从入门到实战
 
-教程作者:前端CooCoo
+视频地址:https://www.bilibili.com/video/BV1h7411N7bg?p=1&vd_source=6e9c2de5b89c2ba4e13469e295319397
+
+视频作者:前端CooCoo
 
 ## 01_Vuex概述
 
 ### 回顾组件间数据共享
 
 - 父组件向子组件传值:v-bind属性绑定
-
 - 子组件向父组件传值:v-on事件绑定
-
 - 所有组件间传值:EventBus
 - $on接收数据的组件
 - $emit发送数据的组件
@@ -103,6 +103,9 @@ const store = new Vuex.Store({
     mutations: {
     	add(state){
             state.count++
+        },
+      addN(state, step){ // 传参
+            state.count += step
         }
     }
 })
@@ -115,13 +118,13 @@ import { mapMutations } from 'vuex'
 
 // 将全局属性映射为组件的方法
 methods: {
-    ...mapMutations(['add'])
+    ...mapMutations(['add', 'addN'])
 }
 
 ```
 
-- 方式一: 通过`this.$store.commit('add')`触发mutations中add的方法
-- 方式二: 通过引入mapMutations函数,然后设置组件方法,通过`this.add()`触发mutations中add的方法
+- 方式一: 通过`this.$store.commit('add')`或者`this.$store.commit('addN', 3)`(传参)触发mutations中add的方法
+- 方式二: 通过引入mapMutations函数,然后设置组件方法,通过`this.add()`或者`this.addN(3)` (传参)触发mutations中add的方法
 
 ### actions:处理异步任务
 
@@ -164,7 +167,7 @@ methods: {
 - 方式一: 通过`this.$store.dispatch('addAsync')`触发actions中的addAsync方法
 - 方式二: 通过引入mapActions函数,然后设置组件方法,通过`this.addAsync()`触发mutations中add的方法
 
-### getters:通过state,return新数据
+### getters: 通过包装state数据,return一个包装后的新数据
 
 ```js
 // store.js
@@ -251,3 +254,11 @@ export default{
 }
 ```
 
+## 05_Vuex持久化存储
+
+Vuex本身不是持久化存储的数据(页面刷新后更改的数据就被重置了)
+
+想要实现持久化存储有两种方式:
+
+- 自己写函数把Vuex中的数据保存到localStorage中,再从localStorage中取数据
+- 使用插件vuex-persistedstate
