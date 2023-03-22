@@ -31,12 +31,12 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [ ] [`escape()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape) Deprecated
 - [ ] [`unescape()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape) Deprecated
 
-### [Fundamental objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#fundamental_objects)
+### [Fundamental objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#fundamental_objects)(TODO)
 
-- [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-- [`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [ ] [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [ ] [`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [ ] [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [ ] [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 
 ### [Error objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#error_objects)
 
@@ -57,14 +57,14 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [x] [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 - [x] [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-### [Text processing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#text_processing)
+### [Text processing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#text_processing)(TODO)
 
 - [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 ### [Indexed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#indexed_collections)
 
-- [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)(TODO)
 - [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
 - [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 - [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
@@ -90,7 +90,7 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [`SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
 - [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 - [`Atomics`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`JSON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- [`JSON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)(TODO)
 
 ### [Managing memory](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#managing_memory)
 
@@ -99,14 +99,14 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 
 ### [Control abstraction objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#control_abstraction_objects)
 
-- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [`GeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-- [`AsyncGeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-- [`Generator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-- [`AsyncGenerator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
-- [`AsyncFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+- [x] [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [x] [`GeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+- [x] [`AsyncGeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
+- [x] [`Generator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+- [x] [`AsyncGenerator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
+- [x] [`AsyncFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
 
-### [Reflection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#reflection)
+### [Reflection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#reflection)(TODO)
 
 - [`Reflect`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
 - [`Proxy`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
@@ -147,9 +147,9 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 ### [Functions and classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#functions_and_classes)
 
 - [x] [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [ ] [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [ ] [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- [ ] [`async function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [x] [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [x] [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [x] [`async function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [x] [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
 
 ### [Iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#iterations)
@@ -158,7 +158,7 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [x] [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 - [x] [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 - [x] [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [ ] [`for await...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [x] [`for await...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
 - [x] [`while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ### [Others](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#others)
@@ -176,20 +176,20 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 
 [JavaScript expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
 
-### [Primary expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#primary_expressions)
+### [Primary expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#primary_expressions)(TODO)
 
-- [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-- [Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- [`[\]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [`{}`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-- [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function*)
-- [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
-- [`async function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
-- [`/ab+c/i`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [``string``](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-- [`( )`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping)
+- [ ] [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [ ] [Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+- [ ] [`[\]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [ ] [`{}`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [ ] [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [ ] [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [ ] [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function*)
+- [x] [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
+- [x] [`async function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
+- [ ] [`/ab+c/i`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [ ] [``string``](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [x] [`( )`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping)
 
 ### [Left-hand-side expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#left-hand-side_expressions)
 
@@ -217,7 +217,7 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [x] [`-`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [x] [`~`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
 - [x] [`!`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT)
-- [ ] [`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+- [x] [`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
 ### [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#arithmetic_operators)
 
@@ -252,9 +252,9 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 
 ### [Binary bitwise operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#binary_bitwise_operators)
 
-- [`&`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
-- [`|`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [`^`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [x] [`&`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [x] [`|`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [x] [`^`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
 
 ### [Binary logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#binary_logical_operators)
 
@@ -274,12 +274,12 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [x] [`%=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
 - [x] [`+=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
 - [x] [`-=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
-- [ ] [`<<=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
-- [ ] [`>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
-- [ ] [`>>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
-- [ ] [`&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- [ ] [`^=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
-- [ ] [`|=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [x] [`<<=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [x] [`>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [x] [`>>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [x] [`&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [x] [`^=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [x] [`|=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - [x] [`**=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
 - [x] [`&&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
 - [x] [`||=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
@@ -288,18 +288,18 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 
 ### [Yield operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#yield_operators)
 
-- [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield)
-- [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
+- [x] [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+- [x] [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
 
-### [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#spread_syntax)
+### [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#spread_syntax)(TODO)
 
 - [`...obj`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-### [Comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#comma_operator)
+### [Comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#comma_operator)(TODO)
 
 - [`,`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
 
-## [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#functions)
+## [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#functions)(TODO)
 
 [JavaScript functions.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
 
@@ -311,7 +311,7 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
-## [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#classes)
+## [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#classes)(TODO)
 
 [JavaScript classes.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
@@ -322,7 +322,7 @@ If you are new to JavaScript, start with the [guide](https://developer.mozilla.o
 - [`static`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - [Static initialization blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-## [Additional reference pages](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#additional_reference_pages)
+## [Additional reference pages](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#additional_reference_pages)(TODO)
 
 - [Lexical grammar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
