@@ -1,6 +1,6 @@
 # Vue.js基础(P1-P60)
 
-## 00_教程简介
+## 0教程简介
 
 视频教程: [尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通](https://www.bilibili.com/video/BV1Zy4y1K7SH?p=1&vd_source=6e9c2de5b89c2ba4e13469e295319397) by**张天禹**
 
