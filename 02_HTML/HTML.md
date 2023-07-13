@@ -8,56 +8,439 @@
 2. [MDN的的HTML指南](https://developer.mozilla.org/zh-CN/docs/Learn/HTML)
 3. [B站的尚硅谷前端html+css零基础教程，2023最新前端html5+css3视频](https://www.bilibili.com/video/BV1p84y1P7Z5/?spm_id_from=333.337.search-card.all.click&vd_source=6e9c2de5b89c2ba4e13469e295319397)
 
+### 1 w3schools HTML Tutorial
+
+#### 1.1 HTML Tutorial
+
+[HTML HOME](https://www.w3schools.com/html/default.asp)(2023.07.13-复习)
+
+[HTML Introduction](https://www.w3schools.com/html/html_intro.asp)(2023.07.13-复习)
+
+[HTML Editors](https://www.w3schools.com/html/html_editors.asp)(2023.07.13-复习)
+
+[HTML Basic](https://www.w3schools.com/html/html_basic.asp)(2023.07.13-复习)
+
+[HTML Elements](https://www.w3schools.com/html/html_elements.asp)(2023.07.13-复习)
+
+[HTML Attributes](https://www.w3schools.com/html/html_attributes.asp)(2023.07.13-复习)
+
+[HTML Headings](https://www.w3schools.com/html/html_headings.asp)(2023.07.13-复习)
+
+[HTML Paragraphs](https://www.w3schools.com/html/html_paragraphs.asp)(2023.07.13-复习)
+
+The browser will automatically remove any extra spaces and lines when the page is displayed:
+
+![image-20230713150741576](HTML.assets/image-20230713150741576.png)
+
+| Tag                                                 | Description                              |
+| :-------------------------------------------------- | :--------------------------------------- |
+| [<p>](https://www.w3schools.com/tags/tag_p.asp)     | Defines a paragraph                      |
+| [<hr>](https://www.w3schools.com/tags/tag_hr.asp)   | Defines a thematic change in the content |
+| [<br>](https://www.w3schools.com/tags/tag_br.asp)   | Inserts a single line break              |
+| [<pre>](https://www.w3schools.com/tags/tag_pre.asp) | Defines pre-formatted text               |
+
+[HTML Styles](https://www.w3schools.com/html/html_styles.asp)(2023.07.13-复习)
+
+[HTML Formatting](https://www.w3schools.com/html/html_formatting.asp)(2023.07.13-复习)
+
+| Tag                                                       | Description                                          |
+| :-------------------------------------------------------- | :--------------------------------------------------- |
+| [<b>](https://www.w3schools.com/tags/tag_b.asp)           | Defines bold text                                    |
+| [<em>](https://www.w3schools.com/tags/tag_em.asp)         | Defines emphasized text                              |
+| [<i>](https://www.w3schools.com/tags/tag_i.asp)           | Defines a part of text in an alternate voice or mood |
+| [<small>](https://www.w3schools.com/tags/tag_small.asp)   | Defines smaller text                                 |
+| [<strong>](https://www.w3schools.com/tags/tag_strong.asp) | Defines important text                               |
+| [<sub>](https://www.w3schools.com/tags/tag_sub.asp)       | Defines subscripted text                             |
+| [<sup>](https://www.w3schools.com/tags/tag_sup.asp)       | Defines superscripted text                           |
+| [<ins>](https://www.w3schools.com/tags/tag_ins.asp)       | Defines inserted text                                |
+| [<del>](https://www.w3schools.com/tags/tag_del.asp)       | Defines deleted text                                 |
+| [<mark>](https://www.w3schools.com/tags/tag_mark.asp)     | Defines marked/highlighted text                      |
+
+[HTML Quotations](https://www.w3schools.com/html/html_quotation_elements.asp)(2023.07.13-复习)
+
+| Tag                                                          | Description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [<abbr>](https://www.w3schools.com/tags/tag_abbr.asp)        | Defines an abbreviation or acronym                           |
+| [<address>](https://www.w3schools.com/tags/tag_address.asp)  | Defines contact information for the author/owner of a document |
+| [<bdo>](https://www.w3schools.com/tags/tag_bdo.asp)          | Defines the text direction                                   |
+| [<blockquote>](https://www.w3schools.com/tags/tag_blockquote.asp) | Defines a section that is quoted from another source         |
+| [<cite>](https://www.w3schools.com/tags/tag_cite.asp)        | Defines the title of a work                                  |
+| [<q>](https://www.w3schools.com/tags/tag_q.asp)              | Defines a short inline quotation                             |
+
+[HTML Comments](https://www.w3schools.com/html/html_comments.asp)(2023.07.13-复习)
+
+[HTML Colors](https://www.w3schools.com/html/html_colors.asp)(2023.07.13-复习)
+
+| Color       | example                | Description                                                  |
+| ----------- | ---------------------- | ------------------------------------------------------------ |
+| Color Names | Red,Tomato,etc         |                                                              |
+| RGB         | rgb(255, 99, 71)       | red,green,blue                                               |
+| RGBA        | rgb(255, 99, 71,0.5)   | red,green,blue,alpha(透明度)                                 |
+| HEX         | #ff6347                | #rrggbb                                                      |
+| HSL         | hsl(0, 100%, 50%)      | hue(色调):0-red,120-green,240-blue,saturation(饱和度),lightnes(亮度) |
+| HSLA        | hsl(0, 100%, 50%, 0.5) | hue(色调),saturation(饱和度),lightnes(亮度),alpha(透明度)    |
+
+[HTML CSS](https://www.w3schools.com/html/html_css.asp)(2023.07.13-复习)
+
+[HTML Links](https://www.w3schools.com/html/html_links.asp)(2023.07.13-复习)
+
+```html
+target
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+
+img
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+title
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+mailto:
+<a href="mailto:someone@example.com">Send email</a>
+
+bookmark
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+```
+
+```html
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+```
+
+[HTML Images](https://www.w3schools.com/html/html_images.asp)(2023.07.13-复习)
+
+```html
+image map
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+picture tag
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+```
+
+[HTML Favicon](https://www.w3schools.com/html/html_favicon.asp)(2023.07.13-复习)
+
+```html
+write inside head tag 
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+```
+
+[HTML Page Title](https://www.w3schools.com/html/html_page_title.asp)(2023.07.13-复习)
+
+[HTML Tables](https://www.w3schools.com/html/html_tables.asp)(未复习)
+
+[HTML Lists](https://www.w3schools.com/html/html_lists.asp)(2023.07.13-复习)
+
+```html
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+attribute: type, start, list-style-type
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+```
+
+| Tag                                               | Description                              |
+| :------------------------------------------------ | :--------------------------------------- |
+| [<ul>](https://www.w3schools.com/tags/tag_ul.asp) | Defines an unordered list                |
+| [<ol>](https://www.w3schools.com/tags/tag_ol.asp) | Defines an ordered list                  |
+| [<li>](https://www.w3schools.com/tags/tag_li.asp) | Defines a list item                      |
+| [<dl>](https://www.w3schools.com/tags/tag_dl.asp) | Defines a description list               |
+| [<dt>](https://www.w3schools.com/tags/tag_dt.asp) | Defines a term in a description list     |
+| [<dd>](https://www.w3schools.com/tags/tag_dd.asp) | Describes the term in a description list |
+
+[HTML Block & Inline](https://www.w3schools.com/html/html_blocks.asp)(2023.07.13-复习)
+
+```
+Block Elements
+<address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt> <fieldset> <figcaption> <figure> <footer> <form> <h1>-<h6> <header> <hr> <li><main> <nav> <noscript> <ol> <p><pre> <section> <table> <tfoot> <ul> <video>
+
+Inline Elements
+<a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code> <dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q> <samp> <script>
+<select> <small> <span> <strong> <sub> <sup> <textarea> <time> <tt> <var>
+```
+
+[HTML Classes](https://www.w3schools.com/html/html_classes.asp)(2023.07.13-复习)
+
+[HTML Id](https://www.w3schools.com/html/html_id.asp)(2023.07.13-复习)
+
+[HTML Iframes](https://www.w3schools.com/html/html_iframe.asp)(2023.07.13-复习)
+
+[HTML JavaScript](https://www.w3schools.com/html/html_scripts.asp)(2023.07.13-复习)
+
+[HTML File Paths](https://www.w3schools.com/html/html_filepaths.asp)(2023.07.13-复习)
+
+[HTML Head](https://www.w3schools.com/html/html_head.asp)(2023.07.13-复习)
+
+```html
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Free Web tutorials">
+<meta name="author" content="John Doe">
+<meta http-equiv="refresh" content="30">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+The <base> element specifies the base URL and/or target for all relative URLs in a page.
+<base href="https://www.w3schools.com/" target="_blank">
+```
+
+| Tag                                                       | Description                                                  |
+| :-------------------------------------------------------- | :----------------------------------------------------------- |
+| [<head>](https://www.w3schools.com/tags/tag_head.asp)     | Defines information about the document                       |
+| [<title>](https://www.w3schools.com/tags/tag_title.asp)   | Defines the title of a document                              |
+| [<base>](https://www.w3schools.com/tags/tag_base.asp)     | Defines a default address or a default target for all links on a page |
+| [<link>](https://www.w3schools.com/tags/tag_link.asp)     | Defines the relationship between a document and an external resource |
+| [<meta>](https://www.w3schools.com/tags/tag_meta.asp)     | Defines metadata about an HTML document                      |
+| [<script>](https://www.w3schools.com/tags/tag_script.asp) | Defines a client-side script                                 |
+| [<style>](https://www.w3schools.com/tags/tag_style.asp)   | Defines style information for a document                     |
+
+[HTML Layout(2023.07.13-复习)](https://www.w3schools.com/html/html_layout.asp)
+
+ ![image-20230713163804121](HTML.assets/image-20230713163804121.png)
+
+[HTML Responsive](https://www.w3schools.com/html/html_responsive.asp)(未复习)
+
+[HTML Computercode](https://www.w3schools.com/html/html_computercode_elements.asp)(2023.07.13-复习)
+
+| Tag                                                   | Description               |
+| :---------------------------------------------------- | :------------------------ |
+| [<code>](https://www.w3schools.com/tags/tag_code.asp) | Defines programming code  |
+| [<kbd>](https://www.w3schools.com/tags/tag_kbd.asp)   | Defines keyboard input    |
+| [<samp>](https://www.w3schools.com/tags/tag_samp.asp) | Defines computer output   |
+| [<var>](https://www.w3schools.com/tags/tag_var.asp)   | Defines a variable        |
+| [<pre>](https://www.w3schools.com/tags/tag_pre.asp)   | Defines preformatted text |
+
+[HTML Semantics](https://www.w3schools.com/html/html5_semantic_elements.asp)(2023.07.13-复习)
+
+```html
+The <article> element specifies independent, self-contained content.
+The <section> element defines section in a document.
+<section>
+<h1>WWF</h1>
+<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+</section>
+
+<article>
+<h2>Google Chrome</h2>
+<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+</article>
+
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli">
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+```
+
+[HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp)(2023.07.13-复习)
+
+[HTML Entities](https://www.w3schools.com/html/html_entities.asp)(2023.07.13-复习)
+
+![image-20230713165748779](HTML.assets/image-20230713165748779.png)
+
+[HTML Symbols](https://www.w3schools.com/html/html_symbols.asp)(2023.07.13-复习)
+
+[HTML Emojis](https://www.w3schools.com/html/html_emojis.asp)(2023.07.13-复习)
+
+[HTML Charset](https://www.w3schools.com/html/html_charset.asp)(2023.07.13-复习)
+
+[HTML URL Encode](https://www.w3schools.com/html/html_urlencode.asp)(2023.07.13-复习)
+
+![image-20230713170436644](HTML.assets/image-20230713170436644.png)
+
+[HTML vs. XHTML](https://www.w3schools.com/html/html_xhtml.asp)(2023.07.13-复习)
+
+#### 1.2 HTML Forms
+
+[HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+
+[HTML Form Attributes](https://www.w3schools.com/html/html_forms_attributes.asp)
+
+[HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+
+[HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+
+[HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+
+[HTML Input Form Attributes](https://www.w3schools.com/html/html_form_attributes_form.asp)
 
 
-## HTML Tutorial
 
-- [x] [HTML HOME](https://www.w3schools.com/html/default.asp)
-- [x] [HTML Introduction](https://www.w3schools.com/html/html_intro.asp)
-- [x] [HTML Editors](https://www.w3schools.com/html/html_editors.asp)
-- [x] [HTML Basic](https://www.w3schools.com/html/html_basic.asp)
-- [x] [HTML Elements](https://www.w3schools.com/html/html_elements.asp)
-- [x] [HTML Attributes](https://www.w3schools.com/html/html_attributes.asp)
-- [x] [HTML Headings](https://www.w3schools.com/html/html_headings.asp)
-- [x] [HTML Paragraphs](https://www.w3schools.com/html/html_paragraphs.asp)
-- [x] [HTML Styles](https://www.w3schools.com/html/html_styles.asp)
-- [x] [HTML Formatting](https://www.w3schools.com/html/html_formatting.asp)
-- [x] [HTML Quotations](https://www.w3schools.com/html/html_quotation_elements.asp)
-- [x] [HTML Comments](https://www.w3schools.com/html/html_comments.asp)
-- [x] [HTML Colors](https://www.w3schools.com/html/html_colors.asp)
-- [x] [HTML CSS](https://www.w3schools.com/html/html_css.asp)
-- [x] [HTML Links](https://www.w3schools.com/html/html_links.asp)
-- [x] [HTML Images](https://www.w3schools.com/html/html_images.asp)
-- [x] [HTML Favicon](https://www.w3schools.com/html/html_favicon.asp)
-- [x] [HTML Page Title](https://www.w3schools.com/html/html_page_title.asp)
-- [x] [HTML Tables](https://www.w3schools.com/html/html_tables.asp)
-- [x] [HTML Lists](https://www.w3schools.com/html/html_lists.asp)
-- [x] [HTML Block & Inline](https://www.w3schools.com/html/html_blocks.asp)
-- [x] [HTML Classes](https://www.w3schools.com/html/html_classes.asp)
-- [x] [HTML Id](https://www.w3schools.com/html/html_id.asp)[HTML Iframes](https://www.w3schools.com/html/html_iframe.asp)
-- [x] [HTML JavaScript](https://www.w3schools.com/html/html_scripts.asp)
-- [x] [HTML File Paths](https://www.w3schools.com/html/html_filepaths.asp)
-- [x] [HTML Head](https://www.w3schools.com/html/html_head.asp)
-- [x] [HTML Layout](https://www.w3schools.com/html/html_layout.asp)
-- [x] [HTML Responsive](https://www.w3schools.com/html/html_responsive.asp)
-- [x] [HTML Computercode](https://www.w3schools.com/html/html_computercode_elements.asp)
-- [x] [HTML Semantics](https://www.w3schools.com/html/html5_semantic_elements.asp)
-- [x] [HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp)
-- [x] [HTML Entities](https://www.w3schools.com/html/html_entities.asp)
-- [x] [HTML Symbols](https://www.w3schools.com/html/html_symbols.asp)
-- [x] [HTML Emojis](https://www.w3schools.com/html/html_emojis.asp)
-- [x] [HTML Charset](https://www.w3schools.com/html/html_charset.asp)
-- [x] [HTML URL Encode](https://www.w3schools.com/html/html_urlencode.asp)
-- [x] [HTML vs. XHTML](https://www.w3schools.com/html/html_xhtml.asp)
 
-## HTML Forms
 
-- [ ] [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
-- [ ] [HTML Form Attributes](https://www.w3schools.com/html/html_forms_attributes.asp)
-- [ ] [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
-- [ ] [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
-- [ ] [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
-- [ ] [HTML Input Form Attributes](https://www.w3schools.com/html/html_form_attributes_form.asp)
+#### 2 B站的尚硅谷前端html+css零基础教程，2023最新前端html5+css3视频
+
+001_教程简介
+
+002_认识两位先驱
+
+003_计算机基础
+
+004_CS架构与BS架构
+
+005_浏览器相关知识
+
+006_网页相关概念
+
+007_HTML简介
+
+008_准备工作
+
+009_HTML初体验
+
+010_HTML标签
+
+011_HTML标签属性
+
+012_HTML基本结构
+
+013_安装VSCode
+
+014_安装LiveServer插件
+
+015_HTML注释
+
+016_HTML文档声明
+
+017_HTML字符编码
+
+018_HTML设置语言
+
+019_HTML标准结构
+
+020_开发者文档
+
+021_HTML排版标签
+
+022_HTML语义化标签
+
+023_块级元素与行内元素
+
+024_常用的文本标签
+
+025_不常用的文本标签
+
+026_HTML图片标签
+
+027_相对路径_绝对路径
+
+028_常见图片格式_1
+
+029_常见图片格式_2
+
+030_超链接_跳转页面
+
+031_超链接_跳转文件
+
+032_超链接_跳转锚点
+
+033_超链接_唤起指定应用
+
+034_超文本的真正含义
+
+035_列表
+
+036_列表_注意事项
+
+037_表格_基本结构
+
+038_表格_常用属性
+
+039_表格_跨行与跨列
+
+040_补充几个常用标签
+
+041_表单_基本结构
+
+042_表单_文本框与密码框
+
+043_表单_单选框与多选框
+
+044_表单_隐藏域
+
+045_表单_提交与重置
+
+046_表单_普通按钮
+
+047_表格_文本域和下拉框
+
+048_表单_禁用表单控件
+
+049_表单_label标签
+
+050_表单_fieldset与legend
+
+051_表单_总结
+
+052_框架标签
+
+053_HTML字符实体
+
+054_HTML全局属性
+
+055_meta元信息
+
+056_HTML总结
+
+
+
+
+
+
+
+
 
 
 
