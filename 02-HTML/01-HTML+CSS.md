@@ -79,7 +79,8 @@
     | Color Names | Red,Tomato,etc         |                                                              |
     | RGB         | rgb(255, 99, 71)       | red,green,blue                                               |
     | RGBA        | rgb(255, 99, 71,0.5)   | red,green,blue,alpha(透明度)                                 |
-    | HEX         | #ff6347                | #rrggbb                                                      |
+    | HEX         | #ff6347\|#f58          | #rrggbb\|#rgb                                                |
+    | HEXA        | #ff634750\|#fff5       | #rrggbbaa#rgba                                               |
     | HSL         | hsl(0, 100%, 50%)      | hue(色调):0-red,120-green,240-blue,saturation(饱和度),lightnes(亮度) |
     | HSLA        | hsl(0, 100%, 50%, 0.5) | hue(色调),saturation(饱和度),lightnes(亮度),alpha(透明度)    |
 
@@ -1747,7 +1748,7 @@ In addition to the basic HTML global attributes, the following global attributes
 89. 145_CSS_布局_版心(2023.07.17-复习)
 90. 146_CSS_布局_常用类名(2023.07.17-复习)
 91. 147_CSS_布局_重置默认样式(2023.07.17-复习)
-92. 171_CSS3_简介(2023.07.17-复习)
+92. 171_CSS3_简介(2023.07.18-复习)
 93. 172_CSS3_新增长度单位
 94. 173_CSS3_新增盒子属性
 95. 174_CSS3_新增背景属性
