@@ -1532,7 +1532,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
      ![image-20230504153945814](./assets/image-20230504153945814.png)
 
-     ![image-20230504154009155](./assets/image-20230504154009155.png)![image-20230504154042541](./assets/image-20230504154042541.png)
+     ![image-20230504154009155](./assets/image-20230504154009155.png)![im ![image-20230504154042541](./assets/image-20230504154042541.png)
 
 22. [CSS Max-width](https://www.w3schools.com/css/css_max-width.asp)
 
