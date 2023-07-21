@@ -1582,9 +1582,59 @@ In addition to the basic HTML global attributes, the following global attributes
 
 28. [CSS Combinators](https://www.w3schools.com/css/css_combinators.asp)
 
+    | Selector                                                     | Example | Example description                                          |
+    | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+    | [*element element*](https://www.w3schools.com/cssref/sel_element_element.asp) | div p   | Selects all <p> elements inside <div> elements               |
+    | [*element>element*](https://www.w3schools.com/cssref/sel_element_gt.asp) | div > p | Selects all <p> elements where the parent is a <div> element |
+    | [*element+element*](https://www.w3schools.com/cssref/sel_element_pluss.asp) | div + p | Selects the first <p> element that are placed immediately after <div> elements |
+    | [*element1~element2*](https://www.w3schools.com/cssref/sel_gen_sibling.asp) | p ~ ul  | Selects every <ul> element that are preceded by a <p> element |
+
 29. [CSS Pseudo-class](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
+    | Selector                                                     | Example               | Example description                                          |
+    | :----------------------------------------------------------- | :-------------------- | :----------------------------------------------------------- |
+    | [:active](https://www.w3schools.com/cssref/sel_active.asp)   | a:active              | Selects the active link                                      |
+    | [:checked](https://www.w3schools.com/cssref/sel_checked.asp) | input:checked         | Selects every checked <input> element                        |
+    | [:disabled](https://www.w3schools.com/cssref/sel_disabled.asp) | input:disabled        | Selects every disabled <input> element                       |
+    | [:empty](https://www.w3schools.com/cssref/sel_empty.asp)     | p:empty               | Selects every <p> element that has no children               |
+    | [:enabled](https://www.w3schools.com/cssref/sel_enabled.asp) | input:enabled         | Selects every enabled <input> element                        |
+    | [:first-child](https://www.w3schools.com/cssref/sel_firstchild.asp) | p:first-child         | Selects every <p> elements that is the first child of its parent |
+    | [:first-of-type](https://www.w3schools.com/cssref/sel_first-of-type.asp) | p:first-of-type       | Selects every <p> element that is the first <p> element of its parent |
+    | [:focus](https://www.w3schools.com/cssref/sel_focus.asp)     | input:focus           | Selects the <input> element that has focus                   |
+    | [:hover](https://www.w3schools.com/cssref/sel_hover.asp)     | a:hover               | Selects links on mouse over                                  |
+    | [:in-range](https://www.w3schools.com/cssref/sel_in-range.asp) | input:in-range        | Selects <input> elements with a value within a specified range |
+    | [:invalid](https://www.w3schools.com/cssref/sel_invalid.asp) | input:invalid         | Selects all <input> elements with an invalid value           |
+    | [:lang(*language*)](https://www.w3schools.com/cssref/sel_lang.asp) | p:lang(it)            | Selects every <p> element with a lang attribute value starting with "it" |
+    | [:last-child](https://www.w3schools.com/cssref/sel_last-child.asp) | p:last-child          | Selects every <p> elements that is the last child of its parent |
+    | [:last-of-type](https://www.w3schools.com/cssref/sel_last-of-type.asp) | p:last-of-type        | Selects every <p> element that is the last <p> element of its parent |
+    | [:link](https://www.w3schools.com/cssref/sel_link.asp)       | a:link                | Selects all unvisited links                                  |
+    | [:not(selector)](https://www.w3schools.com/cssref/sel_not.asp) | :not(p)               | Selects every element that is not a <p> element              |
+    | [:nth-child(n)](https://www.w3schools.com/cssref/sel_nth-child.asp) | p:nth-child(2)        | Selects every <p> element that is the second child of its parent |
+    | [:nth-last-child(n)](https://www.w3schools.com/cssref/sel_nth-last-child.asp) | p:nth-last-child(2)   | Selects every <p> element that is the second child of its parent, counting from the last child |
+    | [:nth-last-of-type(n)](https://www.w3schools.com/cssref/sel_nth-last-of-type.asp) | p:nth-last-of-type(2) | Selects every <p> element that is the second <p> element of its parent, counting from the last child |
+    | [:nth-of-type(n)](https://www.w3schools.com/cssref/sel_nth-of-type.asp) | p:nth-of-type(2)      | Selects every <p> element that is the second <p> element of its parent |
+    | [:only-of-type](https://www.w3schools.com/cssref/sel_only-of-type.asp) | p:only-of-type        | Selects every <p> element that is the only <p> element of its parent |
+    | [:only-child](https://www.w3schools.com/cssref/sel_only-child.asp) | p:only-child          | Selects every <p> element that is the only child of its parent |
+    | [:optional](https://www.w3schools.com/cssref/sel_optional.asp) | input:optional        | Selects <input> elements with no "required" attribute        |
+    | [:out-of-range](https://www.w3schools.com/cssref/sel_out-of-range.asp) | input:out-of-range    | Selects <input> elements with a value outside a specified range |
+    | [:read-only](https://www.w3schools.com/cssref/sel_read-only.asp) | input:read-only       | Selects <input> elements with a "readonly" attribute specified |
+    | [:read-write](https://www.w3schools.com/cssref/sel_read-write.asp) | input:read-write      | Selects <input> elements with no "readonly" attribute        |
+    | [:required](https://www.w3schools.com/cssref/sel_required.asp) | input:required        | Selects <input> elements with a "required" attribute specified |
+    | [:root](https://www.w3schools.com/cssref/sel_root.asp)       | root                  | Selects the document's root element                          |
+    | [:target](https://www.w3schools.com/cssref/sel_target.asp)   | #news:target          | Selects the current active #news element (clicked on a URL containing that anchor name) |
+    | [:valid](https://www.w3schools.com/cssref/sel_valid.asp)     | input:valid           | Selects all <input> elements with a valid value              |
+    | [:visited](https://www.w3schools.com/cssref/sel_visited.asp) | a:visited             | Selects all visited links                                    |
+
 30. [CSS Pseudo-element](https://www.w3schools.com/css/css_pseudo_elements.asp)
+
+    | Selector                                                     | Example         | Example description                                          |
+    | :----------------------------------------------------------- | :-------------- | :----------------------------------------------------------- |
+    | [::after](https://www.w3schools.com/cssref/sel_after.asp)    | p::after        | Insert something after the content of each <p> element       |
+    | [::before](https://www.w3schools.com/cssref/sel_before.asp)  | p::before       | Insert something before the content of each <p> element      |
+    | [::first-letter](https://www.w3schools.com/cssref/sel_firstletter.asp) | p::first-letter | Selects the first letter of each <p> element                 |
+    | [::first-line](https://www.w3schools.com/cssref/sel_firstline.asp) | p::first-line   | Selects the first line of each <p> element                   |
+    | [::marker](https://www.w3schools.com/cssref/sel_marker.asp)  | ::marker        | Selects the markers of list items                            |
+    | [::selection](https://www.w3schools.com/cssref/sel_selection.asp) | p::selection    | Selects the portion of an element that is selected by a user |
 
 31. [CSS Opacity](https://www.w3schools.com/css/css_image_transparency.asp)
 
@@ -1598,9 +1648,26 @@ In addition to the basic HTML global attributes, the following global attributes
 
 36. [CSS Attr Selectors](https://www.w3schools.com/css/css_attribute_selectors.asp)
 
+    | Selector                                                     | Example              | Example description                                          |
+    | :----------------------------------------------------------- | :------------------- | :----------------------------------------------------------- |
+    | [[*attribute*\]](https://www.w3schools.com/cssref/sel_attribute.asp) | [target]             | Selects all elements with a target attribute                 |
+    | [[*attribute*=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value.asp) | [target="_blank"]    | Selects all elements with target="_blank"                    |
+    | [[*attribute*~=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value_contains.asp) | [title~="flower"]    | Selects all elements with a title attribute containing the word "flower" |
+    | [[*attribute*\|=*value*\]](https://www.w3schools.com/cssref/sel_attribute_value_lang.asp) | [lang\|="en"]        | Selects all elements with a lang attribute value starting with "en" |
+    | [[*attribute*^=*value*\]](https://www.w3schools.com/cssref/sel_attr_begin.asp) | a[href^="https"]     | Selects every <a> element whose href attribute value begins with "https" |
+    | [[*attribute*$=*value*\]](https://www.w3schools.com/cssref/sel_attr_end.asp) | a[href$=".pdf"]      | Selects every <a> element whose href attribute value ends with ".pdf" |
+    | [[*attribute**=*value*\]](https://www.w3schools.com/cssref/sel_attr_contain.asp) | a[href*="w3schools"] | Selects every <a> element whose href attribute value contains the substring "w3schools" |
+
 37. [CSS Forms](https://www.w3schools.com/css/css_form.asp)
 
 38. [CSS Counters](https://www.w3schools.com/css/css_counters.asp)
+
+    | Property                                                     | Description                                                  |
+    | :----------------------------------------------------------- | :----------------------------------------------------------- |
+    | [content](https://www.w3schools.com/cssref/pr_gen_content.asp) | Used with the ::before and ::after pseudo-elements, to insert generated content |
+    | [counter-increment](https://www.w3schools.com/cssref/pr_gen_counter-increment.asp) | Increments one or more counter values                        |
+    | [counter-reset](https://www.w3schools.com/cssref/pr_gen_counter-reset.asp) | Creates or resets one or more counters                       |
+    | [counter()](https://www.w3schools.com/cssref/func_counter.asp) | Returns the current value of the named counter               |
 
 39. [CSS Website Layout](https://www.w3schools.com/css/css_website_layout.asp)
 
@@ -1612,21 +1679,94 @@ In addition to the basic HTML global attributes, the following global attributes
 
 43. [CSS Math Functions](https://www.w3schools.com/css/css_math_functions.asp)
 
+    | Function                                                 | Description                                                  |
+    | :------------------------------------------------------- | :----------------------------------------------------------- |
+    | [calc()](https://www.w3schools.com/cssref/func_calc.asp) | Allows you to perform calculations to determine CSS property values |
+    | [max()](https://www.w3schools.com/cssref/func_max.asp)   | Uses the largest value, from a comma-separated list of values, as the property value |
+    | [min()](https://www.w3schools.com/cssref/func_min.asp)   | Uses the smallest value, from a comma-separated list of values, as the property value |
+
 ### 4.2 CSS Advanced
 
 1. [CSS Rounded Corners](https://www.w3schools.com/css/css3_borders.asp)
+
+   | Property                                                     | Description                                                  |
+   | :----------------------------------------------------------- | :----------------------------------------------------------- |
+   | [border-radius](https://www.w3schools.com/cssref/css3_pr_border-radius.asp) | A shorthand property for setting all the four border-*-*-radius properties |
+   | [border-top-left-radius](https://www.w3schools.com/cssref/css3_pr_border-top-left-radius.asp) | Defines the shape of the border of the top-left corner       |
+   | [border-top-right-radius](https://www.w3schools.com/cssref/css3_pr_border-top-right-radius.asp) | Defines the shape of the border of the top-right corner      |
+   | [border-bottom-right-radius](https://www.w3schools.com/cssref/css3_pr_border-bottom-right-radius.asp) | Defines the shape of the border of the bottom-right corner   |
+   | [border-bottom-left-radius](https://www.w3schools.com/cssref/css3_pr_border-bottom-left-radius.asp) | Defines the shape of the border of the bottom-left corner    |
 2. [CSS Border Images](https://www.w3schools.com/css/css3_border_images.asp)
+
+   | Property                                                     | Description                                                  |
+   | :----------------------------------------------------------- | :----------------------------------------------------------- |
+   | [border-image](https://www.w3schools.com/cssref/css3_pr_border-image.asp) | A shorthand property for setting all the border-image-* properties |
+   | [border-image-source](https://www.w3schools.com/cssref/css3_pr_border-image-source.asp) | Specifies the path to the image to be used as a border       |
+   | [border-image-slice](https://www.w3schools.com/cssref/css3_pr_border-image-slice.asp) | Specifies how to slice the border image                      |
+   | [border-image-width](https://www.w3schools.com/cssref/css3_pr_border-image-width.asp) | Specifies the widths of the border image                     |
+   | [border-image-outset](https://www.w3schools.com/cssref/css3_pr_border-image-outset.asp) | Specifies the amount by which the border image area extends beyond the border box |
+   | [border-image-repeat](https://www.w3schools.com/cssref/css3_pr_border-image-repeat.asp) | Specifies whether the border image should be repeated, rounded or stretched |
 3. [CSS Backgrounds](https://www.w3schools.com/css/css3_backgrounds.asp)
 4. [CSS Colors](https://www.w3schools.com/css/css3_colors.asp)
 5. [CSS Color Keywords](https://www.w3schools.com/css/css_colors_keywords.asp)
 6. [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp)
+
+   CSS Linear Gradients
+
+   CSS Radial Gradients
+
+   CSS Conic Gradients
+
+   Repeating Gradients
 7. [CSS Shadows](https://www.w3schools.com/css/css3_shadows.asp)
 8. [CSS Text Effects](https://www.w3schools.com/css/css3_text_effects.asp)
+
+   | Property                                                     | Description                                                  |
+   | :----------------------------------------------------------- | :----------------------------------------------------------- |
+   | [text-justify](https://www.w3schools.com/cssref/css3_pr_text-justify.asp) | Specifies how justified text should be aligned and spaced    |
+   | [text-overflow](https://www.w3schools.com/cssref/css3_pr_text-overflow.asp) | Specifies how overflowed content that is not displayed should be signaled to the user |
+   | [word-break](https://www.w3schools.com/cssref/css3_pr_word-break.asp) | Specifies line breaking rules for non-CJK scripts            |
+   | [word-wrap](https://www.w3schools.com/cssref/css3_pr_word-wrap.asp) | Allows long words to be able to be broken and wrap onto the next line |
+   | [writing-mode](https://www.w3schools.com/cssref/css3_pr_writing-mode.asp) | Specifies whether lines of text are laid out horizontally or vertically |
 9. [CSS Web Fonts](https://www.w3schools.com/css/css3_fonts.asp)
 10. [CSS 2D Transforms](https://www.w3schools.com/css/css3_2dtransforms.asp)
+
+    | Function                | Description                                                  |
+    | :---------------------- | :----------------------------------------------------------- |
+    | matrix(*n,n,n,n,n,n*)   | Defines a 2D transformation, using a matrix of six values    |
+    | translate(*x,y*)        | Defines a 2D translation, moving the element along the X- and the Y-axis |
+    | translateX(*n*)         | Defines a 2D translation, moving the element along the X-axis |
+    | translateY(*n*)         | Defines a 2D translation, moving the element along the Y-axis |
+    | scale(*x,y*)            | Defines a 2D scale transformation, changing the elements width and height |
+    | scaleX(*n*)             | Defines a 2D scale transformation, changing the element's width |
+    | scaleY(*n*)             | Defines a 2D scale transformation, changing the element's height |
+    | rotate(*angle*)         | Defines a 2D rotation, the angle is specified in the parameter |
+    | skew(*x-angle,y-angle*) | Defines a 2D skew transformation along the X- and the Y-axis |
+    | skewX(*angle*)          | Defines a 2D skew transformation along the X-axis            |
+    | skewY(*angle*)          | Defines a 2D skew transformation along the Y-axis            |
 11. [CSS 3D Transforms](https://www.w3schools.com/css/css3_3dtransforms.asp)
 12. [CSS Transitions](https://www.w3schools.com/css/css3_transitions.asp)
+
+    | [transition](https://www.w3schools.com/cssref/css3_pr_transition.asp) | A shorthand property for setting the four transition properties into a single property |
+    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | [transition-delay](https://www.w3schools.com/cssref/css3_pr_transition-delay.asp) | Specifies a delay (in seconds) for the transition effect     |
+    | [transition-duration](https://www.w3schools.com/cssref/css3_pr_transition-duration.asp) | Specifies how many seconds or milliseconds a transition effect takes to complete |
+    | [transition-property](https://www.w3schools.com/cssref/css3_pr_transition-property.asp) | Specifies the name of the CSS property the transition effect is for |
+    | [transition-timing-function](https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp) | Specifies the speed curve of the transition effect           |
 13. [CSS Animations](https://www.w3schools.com/css/css3_animations.asp)
+
+    | Property                                                     | Description                                                  |
+    | :----------------------------------------------------------- | :----------------------------------------------------------- |
+    | [@keyframes](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp) | Specifies the animation code                                 |
+    | [animation](https://www.w3schools.com/cssref/css3_pr_animation.asp) | A shorthand property for setting all the animation properties |
+    | [animation-delay](https://www.w3schools.com/cssref/css3_pr_animation-delay.asp) | Specifies a delay for the start of an animation              |
+    | [animation-direction](https://www.w3schools.com/cssref/css3_pr_animation-direction.asp) | Specifies whether an animation should be played forwards, backwards or in alternate cycles |
+    | [animation-duration](https://www.w3schools.com/cssref/css3_pr_animation-duration.asp) | Specifies how long time an animation should take to complete one cycle |
+    | [animation-fill-mode](https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp) | Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both) |
+    | [animation-iteration-count](https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.asp) | Specifies the number of times an animation should be played  |
+    | [animation-name](https://www.w3schools.com/cssref/css3_pr_animation-name.asp) | Specifies the name of the @keyframes animation               |
+    | [animation-play-state](https://www.w3schools.com/cssref/css3_pr_animation-play-state.asp) | Specifies whether the animation is running or paused         |
+    | [animation-timing-function](https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp) | Specifies the speed curve of the animation                   |
 14. [CSS Tooltips](https://www.w3schools.com/css/css_tooltip.asp)
 15. [CSS Style Images](https://www.w3schools.com/css/css3_images.asp)
 16. [CSS Image Reflection](https://www.w3schools.com/css/css3_image_reflection.asp)
@@ -1645,11 +1785,29 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ### 4.3 CSS Responsive
 
-[RWD Intro](https://www.w3schools.com/css/css_rwd_intro.asp)[RWD Viewport](https://www.w3schools.com/css/css_rwd_viewport.asp)[RWD Grid View](https://www.w3schools.com/css/css_rwd_grid.asp)[RWD Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)[RWD Images](https://www.w3schools.com/css/css_rwd_images.asp)[RWD Videos](https://www.w3schools.com/css/css_rwd_videos.asp)[RWD Frameworks](https://www.w3schools.com/css/css_rwd_frameworks.asp)[RWD Templates](https://www.w3schools.com/css/css_rwd_templates.asp)
+[RWD Intro](https://www.w3schools.com/css/css_rwd_intro.asp)
+
+[RWD Viewport](https://www.w3schools.com/css/css_rwd_viewport.asp)
+
+[RWD Grid View](https://www.w3schools.com/css/css_rwd_grid.asp)
+
+[RWD Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+
+[RWD Images](https://www.w3schools.com/css/css_rwd_images.asp)
+
+[RWD Videos](https://www.w3schools.com/css/css_rwd_videos.asp)
+
+[RWD Frameworks](https://www.w3schools.com/css/css_rwd_frameworks.asp)
+
+[RWD Templates](https://www.w3schools.com/css/css_rwd_templates.asp)
 
 ### 4.4 CSS Grid
 
-[Grid Intro](https://www.w3schools.com/css/css_grid.asp)[Grid Container](https://www.w3schools.com/css/css_grid_container.asp)[Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
+[Grid Intro](https://www.w3schools.com/css/css_grid.asp)
+
+[Grid Container](https://www.w3schools.com/css/css_grid_container.asp)
+
+[Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
 
 ### 4.5 CSS SASS
 
@@ -1749,33 +1907,33 @@ In addition to the basic HTML global attributes, the following global attributes
 90. 146_CSS_布局_常用类名(2023.07.17-复习)
 91. 147_CSS_布局_重置默认样式(2023.07.17-复习)
 92. 171_CSS3_简介(2023.07.18-复习)
-93. 172_CSS3_新增长度单位
-94. 173_CSS3_新增盒子属性
-95. 174_CSS3_新增背景属性
-96. 175_CSS3_新增边框属性
-97. 176_CSS3_新增文本属性
-98. 177_CSS3_新增渐变
-99. 178_CSS3_web字体_字体图标
-100. 179_CSS3_2D变换
-101. 180_CSS3_3D变换
-102. 181_CSS3_过渡
-103. 182_CSS3_动画
-104. 183_CSS3_多列布局
-105. 184_CSS3_伸缩盒模型_简介
-106. 185_CSS3_伸缩盒模型_容器与项目
-107. 186_CSS3_伸缩盒模型_主轴方向
-108. 187_CSS3_伸缩盒模型_主轴换行方式
-109. 188_CSS3_伸缩盒模型_flex-flow
-110. 189_CSS3_伸缩盒模型_主轴对齐方式
-111. 190_CSS3_伸缩盒模型_侧轴对齐
-112. 191_CSS3_伸缩盒模型_水平垂直居中
-113. 192_CSS3_伸缩盒模型_基准长度
-114. 193_CSS3_伸缩盒模型_伸缩性
-115. 194_CSS3_伸缩盒模型_flex复合属性
-116. 195_CSS3_伸缩盒模型_排序与单独对齐
-117. 196_CSS3_伸缩盒模型_案例练习
-118. 197_CSS3_响应式布局_媒体查询
-119. 198_CSS3_响应式布局_常用阈值
-120. 199_BFC
-121. 200_结束语
+93. 172_CSS3_新增长度单位(2023.07.20-复习)
+94. 173_CSS3_新增盒子属性(2023.07.20-复习)
+95. 174_CSS3_新增背景属性(2023.07.20-复习)
+96. 175_CSS3_新增边框属性(2023.07.20-复习)
+97. 176_CSS3_新增文本属性(2023.07.20-复习)
+98. 177_CSS3_新增渐变(2023.07.20-复习)
+99. 178_CSS3_web字体_字体图标(2023.07.20-复习)
+100. 179_CSS3_2D变换(2023.07.20-复习)
+101. 180_CSS3_3D变换(2023.07.20-复习)
+102. 181_CSS3_过渡(2023.07.20-复习)
+103. 182_CSS3_动画(2023.07.20-复习)
+104. 183_CSS3_多列布局(2023.07.20-复习)
+105. 184_CSS3_伸缩盒模型_简介(2023.07.20-复习)
+106. 185_CSS3_伸缩盒模型_容器与项目(2023.07.20-复习)
+107. 186_CSS3_伸缩盒模型_主轴方向(2023.07.20-复习)
+108. 187_CSS3_伸缩盒模型_主轴换行方式(2023.07.20-复习)
+109. 188_CSS3_伸缩盒模型_flex-flow(2023.07.20-复习)
+110. 189_CSS3_伸缩盒模型_主轴对齐方式(2023.07.20-复习)
+111. 190_CSS3_伸缩盒模型_侧轴对齐(2023.07.20-复习)
+112. 191_CSS3_伸缩盒模型_水平垂直居中(2023.07.20-复习)
+113. 192_CSS3_伸缩盒模型_基准长度(2023.07.20-复习)
+114. 193_CSS3_伸缩盒模型_伸缩性(2023.07.20-复习)
+115. 194_CSS3_伸缩盒模型_flex复合属性(2023.07.20-复习)
+116. 195_CSS3_伸缩盒模型_排序与单独对齐(2023.07.20-复习)
+117. 196_CSS3_伸缩盒模型_案例练习(2023.07.20-复习)
+118. 197_CSS3_响应式布局_媒体查询(2023.07.20-复习)
+119. 198_CSS3_响应式布局_常用阈值(2023.07.20-复习)
+120. 199_BFC(2023.07.20-复习)
+121. 200_结束语(2023.07.20-复习)
 
