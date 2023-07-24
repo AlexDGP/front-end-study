@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>10_伪类选择器_结构伪类_2</title>
     <style>
-        /* 选中的是div的第一个儿子p元素（按照所有兄弟计算的）—— 结构1*/
-        /* div>p:first-child {
+      /* 选中的是div的第一个儿子p元素（按照所有兄弟计算的）—— 结构1*/
+      /* div>p:first-child {
             color: red;
         } */
 
-        /* 选中的是div的最后一个儿子p元素（按照所有兄弟计算的）—— 结构1*/
-        /* div>p:last-child {
+      /* 选中的是div的最后一个儿子p元素（按照所有兄弟计算的）—— 结构1*/
+      /* div>p:last-child {
             color: red;
         } */
-        
-        /* 选中的是div的第n个儿子p元素（按照所有兄弟计算的）—— 结构1 */
-        /* div>p:nth-child(3) {
+
+      /* 选中的是div的第n个儿子p元素（按照所有兄弟计算的）—— 结构1 */
+      /* div>p:nth-child(3) {
             color: red;
         } */
-    
-        /* 选中的是div的偶数个儿子p元素（按照所有兄弟计算的）—— 结构2 */
-        /* 关于n的值 —— 结构2：
+
+      /* 选中的是div的偶数个儿子p元素（按照所有兄弟计算的）—— 结构2 */
+      /* 关于n的值 —— 结构2：
                 1. 0或不写：什么都选不中 —— 几乎不用。
                 2. n ：选中所有子元素  —— 几乎不用。
                 3. 1 ~ 正无穷的整数，选中对应序号的子元素。
@@ -28,27 +28,27 @@
                 5. 2n+1 或 odd ：选中序号为奇数的子元素。
                 6. -n+3 : 选中前三个。
          */
-        /* div>p:nth-child(2n) {
-            color: red;
-        } */
-    
-        /* 选中的是div的第一个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
-        /* div>p:first-of-type{
+      /* div>p:nth-child(2n) {
             color: red;
         } */
 
-        /* 选中的是div的最后一个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
-        /* div>p:last-of-type{
+      /* 选中的是div的第一个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
+      /* div>p:first-of-type{
             color: red;
         } */
-        
-        /* 选中的是div的第n个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
-        /* div>p:nth-of-type(5) {
+
+      /* 选中的是div的最后一个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
+      /* div>p:last-of-type{
+            color: red;
+        } */
+
+      /* 选中的是div的第n个儿子p元素（按照所有同类型兄弟计算的）—— 结构3 */
+      /* div>p:nth-of-type(5) {
             color: red;
         } */
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 结构1 -->
     <!-- <div>
         <p>张三：98分</p>
@@ -87,5 +87,5 @@
         <p>老八：48分</p>
         <span>测试5</span>
     </div> -->
-</body>
+  </body>
 </html>
