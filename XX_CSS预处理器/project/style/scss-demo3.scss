@@ -1,0 +1,14 @@
+// %占位符选择器
+.button%base {
+  border-radius: 4px;
+}
+
+.btn-default {
+  @extend %base;
+  color: #333;
+}
+
+.btn-success {
+  @extend %base;
+  color: green;
+}

@@ -1,0 +1,13 @@
+.button.btn-success, .button.btn-default {
+  border-radius: 4px;
+}
+
+.btn-default {
+  color: #333;
+}
+
+.btn-success {
+  color: green;
+}
+
+/*# sourceMappingURL=scss-demo3.css.map */

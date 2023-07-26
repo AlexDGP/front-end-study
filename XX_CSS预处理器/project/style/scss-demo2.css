@@ -1,0 +1,23 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.container a {
+  color: #333;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.container a:hover {
+  text-decoration: underline;
+  color: red;
+}
+.container .top {
+  border: 1px #f2f2f2 solid;
+}
+.container .top-left {
+  float: left;
+  width: 200px;
+}
+
+/*# sourceMappingURL=scss-demo2.css.map */
