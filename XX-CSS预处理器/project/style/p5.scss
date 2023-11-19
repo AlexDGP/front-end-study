@@ -1,0 +1,47 @@
+$my-color: red;
+$my_color: green; // $my_color跟$my-color效果一样
+p {
+  color: $my-color;
+}
+
+.container {
+  $font-size: 16px !global; // 全局变量
+  $my-color2: black;
+  font-size: $font-size;
+  .main {
+    color: $my-color2; // 报错
+  }
+}
+
+.header {
+  font-size: $font-size;
+  //color: $my-color2; // 报错
+}
+
+$layer-index: 10;
+$border-width: 10px;
+$font-base-family: "Open Sans", Helvetica;
+$top-bg-color: rgba(255, 0, 0, 0.5);
+$block-base-padding: 6px 10px 6px 10px;
+$blank-mode: false;
+$var: null;
+$color-map: (
+  color1: red,
+  color2: #fff,
+  color3: rgba(255, 0, 0, 0.5),
+);
+$font: (
+  serif: "Helvetica Neue",
+  monospace: "Consolas",
+);
+$color4: red !default;
+.footer {
+  @if $blank-mode {
+    background-color: black;
+  } @else {
+    background-color: #fff;
+  }
+  color: map-get($color-map, color3);
+  $color4: green;
+  background-color: $color4;
+}
