@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="app">helloVue{{msg}}</div>
+    <script src="dist/vue.js"></script>
+    <script>
+      let vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            msg: "hello",
+            person: {
+              name: "alex",
+            },
+            list: [1, 2, 3, { a: 50, b: { c: 100 } }],
+          };
+        },
+      });
+      // Vue初次渲染=>初始化数据=>模版编译=>render=>生成虚拟dom=>生成真实DOM
+    </script>
+  </body>
+</html>

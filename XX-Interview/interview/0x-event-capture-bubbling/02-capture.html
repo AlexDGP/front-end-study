@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #outer {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      outer
+      <button id="inner">inner</button>
+    </div>
+    <script>
+      // 事件流三个阶段，捕获=>目标=>冒泡
+      // Dom.addEventListener("click",clickFunc,true); 第三个参数改成true就使用捕获
+      // 捕获阶段 window=>document=>html=>body=>outer=>inner
+      // 目标阶段
+      // 冒泡阶段 inner=>outer=>body=>html=>document=>window
+
+      // 冒泡 body=>outer=>inner
+      document.body.addEventListener(
+        "click",
+        (e) => {
+          alert("body");
+        },
+        true,
+      );
+      document.getElementById("outer").addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation(); // 点击btn,body=>outer1=>outer2. 阻止后方的其他元素传播
+          // e.stopImmediatePropagation(); // 点击btn,body=>outer1. 不仅阻止后方的其他元素传播,也阻止后面的相同元素的同类型事件的处罚
+          alert("outer1");
+        },
+        true,
+      );
+      document.getElementById("outer").addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation(); // 点击btn,body=>outer1=>outer2. 阻止后方的其他元素传播
+          e.stopImmediatePropagation(); // 点击btn,body=>outer1=>outer2. 不仅阻止后方的其他元素传播,也阻止后面的相同元素的同类型事件的处罚
+          alert("outer2");
+        },
+        true,
+      );
+      document.getElementById("outer").addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation(); // 点击btn,body=>outer1=>outer2. 阻止后方的其他元素传播
+          e.stopImmediatePropagation(); // 点击btn,body=>outer1=>outer2=>outer3. 不仅阻止后方的其他元素传播,也阻止后面的相同元素的同类型事件的处罚
+          alert("outer3");
+        },
+        true,
+      );
+      document.getElementById("inner").addEventListener(
+        "click",
+        (e) => {
+          alert("inner");
+        },
+        true,
+      );
+    </script>
+  </body>
+</html>

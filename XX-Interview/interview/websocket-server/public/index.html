@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>
+      <input type="text" />
+    </label>
+    <button>send</button>
+    <div id="info"></div>
+    <script>
+      // const socket = new WebSocket("ws://localhost:3000"); // 请将 your-server-url 替换为实际的服务器地址
+      const socket = new WebSocket(
+        "ws://localhost:3000",
+        ["aaaaaaaaa", "123123123"],
+        "wwwwwwwwwwwwwwwwwwwwwwww",
+      );
+
+      // 处理连接打开事件
+      socket.addEventListener("open", (event) => {
+        console.log("WebSocket 连接已打开");
+        const token = "DSASDASDWDAWDASDASDs"; // 请将 your-authentication-token 替换为实际的身份验证令牌
+        socket.send(token); // 将令牌发送到服务器
+      });
+
+      // 处理消息事件
+      socket.addEventListener("message", (event) => {
+        console.log("接收到消息:", event.data);
+        // 在这里处理从服务器接收到的消息
+      });
+
+      // 处理连接关闭事件
+      socket.addEventListener("close", (event) => {
+        console.log("WebSocket 连接已关闭");
+      });
+
+      // 处理错误事件
+      socket.addEventListener("error", (event) => {
+        console.error("WebSocket 错误:", event);
+      });
+    </script>
+  </body>
+</html>

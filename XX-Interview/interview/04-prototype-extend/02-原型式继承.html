@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Parent(name, age) {
+        this.name = name;
+        this.age = age;
+        this.country = {
+          name: "China",
+        }; // 引用类型
+        this.setName = function (value) {
+          this.name = value;
+        };
+      }
+      function Child(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+      }
+      Child.prototype = new Parent("Zidane", 35);
+      let child1 = new Child("Messi", 20, "male");
+      let child2 = new Child("Beckham", 33, "male");
+      console.log(child1.country === child2.country); // true 这里改变country值,就会相互影响
+      console.log(child1); // Child 此处node和v8,结果不同
+      child1.setName("C.Ronaldo");
+    </script>
+  </body>
+</html>

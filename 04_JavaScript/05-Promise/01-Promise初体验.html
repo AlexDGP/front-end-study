@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Promise初体验</title>
+  </head>
+  <body>
+    <div>
+      <h2>01-Promise初体验</h2>
+      <button id="btn1">点击抽奖1-不使用Promise封装</button>
+      <button id="btn2">点击抽奖2-用Promise封装</button>
+    </div>
+    <script>
+      // Promise是一个ECMAScript6提供的类,目的是更加优雅地书写复杂的异步任务
+      // 由于Promise是ES6新增加的,所以一些旧的浏览器并不支持,苹果的Safari10和Windows的Edge14版本以上浏览器才开始支持ES6特性
+
+      // 随机生成从m到n之间的整数
+      function rand(m, n) {
+        return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+      }
+
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
+
+      // 30%中奖,1秒后出结果
+      // 不使用Promise封装
+      btn1.addEventListener("click", function () {
+        setTimeout(() => {
+          let n = rand(1, 100);
+          if (n <= 30) {
+            alert("恭喜中奖");
+          } else {
+            alert("没有中奖");
+          }
+        }, 1000);
+      });
+
+      // 用Promise封装,并传值
+      btn2.addEventListener("click", function () {
+        const p = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            let n = rand(1, 100);
+            if (n <= 30) {
+              resolve(n);
+            } else {
+              reject(n);
+            }
+          }, 1000);
+        });
+        // 调用promise.then(),利用value,reason传值
+        p.then(
+          (value) => {
+            alert("恭喜中奖,号码:" + value);
+          },
+          (reason) => {
+            alert("没有中奖,号码:" + reason);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

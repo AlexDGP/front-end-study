@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas Performance</title>
+  <style>
+      body {
+          margin: 0;
+          overflow: hidden;
+      }
+      canvas {
+          display: block;
+          height: 100vh;
+          width: 100vw;
+      }
+  </style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+
+<script>
+  const circleCount = 10000;
+  const circleRadius = 5;
+  const highlightColor = "red";
+  const canvas = document.getElementById("myCanvas");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext("2d");
+  const circles = Array.from({ length: circleCount }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    isHighlighted: false,
+    color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+        Math.random() * 255
+    })`,
+  }));
+  const offscreenCanvas = document.createElement("canvas");
+  const offscreenCtx = offscreenCanvas.getContext("2d");
+  offscreenCanvas.width = canvas.width;
+  offscreenCanvas.height = canvas.height;
+
+  function drawCircle(x, y, radius, color) {
+    offscreenCtx.beginPath();
+    offscreenCtx.arc(x, y, radius, 0, Math.PI * 2);
+    offscreenCtx.fillStyle = color;
+    offscreenCtx.fill();
+  }
+
+  function draw() {
+    offscreenCtx.clearRect(
+        0,
+        0,
+        offscreenCanvas.width,
+        offscreenCanvas.height,
+    );
+    for (let i = 0; i < circleCount; i++) {
+      const circle = circles[i];
+      drawCircle(
+          circle.x,
+          circle.y,
+          circleRadius,
+          circle.isHighlighted ? highlightColor : circle.color,
+      );
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(offscreenCanvas, 0, 0);
+    requestAnimationFrame(draw);
+  }
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    offscreenCanvas.width = canvas.width;
+    offscreenCanvas.height = canvas.height;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+  draw();
+  canvas.addEventListener("click", function (e) {
+    const mouseX = e.clientX - canvas.getBoundingClientRect().left;
+    const mouseY = e.clientY - canvas.getBoundingClientRect().top;
+    for (let i = 0; i < circleCount; i++) {
+      const circle = circles[i];
+      const distance = Math.sqrt(
+          (mouseX - circle.x) ** 2 + (mouseY - circle.y) ** 2,
+      );
+      if (distance <= circleRadius) {
+        circle.isHighlighted = !circle.isHighlighted;
+      }
+    }
+  });
+</script>
+</body>
+</html>

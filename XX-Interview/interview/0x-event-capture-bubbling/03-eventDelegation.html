@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #outer {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+    </ul>
+    <script>
+      // 不使用事件委托，给每个li绑定事件
+      document.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          console.log(e.target.innerHTML);
+        });
+      });
+      // // 使用事件委托，给ul绑定事件
+      // document.querySelector("ul").addEventListener("click", (e) => {
+      //   console.log(e.target.innerHTML);
+      // });
+    </script>
+  </body>
+</html>

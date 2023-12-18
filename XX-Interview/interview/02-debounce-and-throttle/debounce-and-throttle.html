@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>
+      debounce
+      <input type="text" class="debounce" />
+    </label>
+    <br />
+    <label>
+      throttle
+      <input type="text" class="throttle" />
+    </label>
+    <script>
+      // 防抖 debounce
+      // 搜索框输入
+      // 文本框保存
+      function debounce() {
+        let debounceTimer = null;
+        document
+          .querySelector(".debounce")
+          .addEventListener("keyup", function () {
+            if (debounceTimer !== null) {
+              clearTimeout(debounceTimer);
+            }
+            debounceTimer = setTimeout(() => {
+              console.log("debounce");
+            }, 1000);
+          });
+      }
+      debounce();
+      // 节流 throttle
+      // 快速点击按钮,鼠标滑动,resize事件,scroll事件
+      // 下拉加载,视频播放记录时间
+      function throttle() {
+        let throttleTimer = null;
+        document
+          .querySelector(".throttle")
+          .addEventListener("keyup", function () {
+            if (throttleTimer !== null) {
+              return;
+            }
+            throttleTimer = setTimeout(() => {
+              console.log("throttle");
+              throttleTimer = null;
+            }, 1000);
+          });
+      }
+      throttle();
+    </script>
+  </body>
+</html>
